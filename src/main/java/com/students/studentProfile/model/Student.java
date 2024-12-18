@@ -1,4 +1,4 @@
-package com.students.studentProfile.student;
+package com.students.studentProfile.model;
 
 import java.util.List;
 
@@ -13,6 +13,7 @@ public class Student {
     private  String dateOfBirth;
     private List<String> courseList;
 
+    // Getter and Setter of id
     public int getId() {
         return id;
     }
@@ -21,6 +22,7 @@ public class Student {
         this.id = id;
     }
 
+    // Getter and Setter of name
     public String getName() {
         return name;
     }
@@ -29,6 +31,7 @@ public class Student {
         this.name = name;
     }
 
+    // Getter and Setter of email
     public String getEmail() {
         return email;
     }
@@ -37,6 +40,7 @@ public class Student {
         this.email = email;
     }
 
+    // Getter and Setter of phone
     public int getPhone() {
         return phone;
     }
@@ -45,6 +49,7 @@ public class Student {
         this.phone = phone;
     }
 
+    // Getter and Setter of batch
     public String getBatch() {
         return batch;
     }
@@ -53,6 +58,7 @@ public class Student {
         this.batch = batch;
     }
 
+    // Getter and Setter of age
     public int getAge() {
         return age;
     }
@@ -61,6 +67,7 @@ public class Student {
         this.age = age;
     }
 
+    // Getter and Setter of date of birth
     public String getDateOfBirth() {
         return dateOfBirth;
     }
@@ -69,6 +76,7 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
+    // Getter and Setter of list of course
     public List<String> getCourseList() {
         return courseList;
     }

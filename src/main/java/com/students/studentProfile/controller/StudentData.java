@@ -1,43 +1,45 @@
 package com.students.studentProfile.controller;
 
-import com.students.studentProfile.student.Student;
+import com.students.studentProfile.model.Student;
+import com.students.studentProfile.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("students")
 public class StudentData {
 
-    private Map <Integer, Student> studentEntries = new HashMap<>();
+    @Autowired
+    private StudentService service;
+
 
     @GetMapping
-    public List<Student> getALL(){
-        return new ArrayList<>(studentEntries.values());
+    public List<Student> getAllStudents(){
+        return service.getAllStudents();
     }
 
     @PostMapping
     public boolean createStudent(@RequestBody Student newStudent){
-        studentEntries.put(newStudent.getId(),newStudent);
-        return true;
+        return service.createStudent(newStudent);
     }
 
     @GetMapping("id/{studentId}")
     public Student getStudentByID(@PathVariable("studentId") Integer studentId){
-        return studentEntries.get(studentId);
+        return service.getStudentById(studentId);
     }
 
     @PutMapping("id/{id}")
-    public Student updateStudentDetails(@PathVariable("id") Integer id , @RequestBody Student updatedEntry){
-        return studentEntries.put(id,updatedEntry);
+    public String updateStudentDetails(@PathVariable("id") Integer id , @RequestBody Student updatedEntry){
+        service.updateStudentById(id,updatedEntry);
+        return "Data updated successfully";
     }
 
     @DeleteMapping("id/{studentId}")
     public Student deleteStudentDetail(@PathVariable("studentId") Integer studentId){
-        return studentEntries.remove(studentId);
+        return service.deleteStudent(studentId);
     }
 
 }
+
