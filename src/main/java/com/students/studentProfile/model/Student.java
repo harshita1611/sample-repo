@@ -1,16 +1,43 @@
 package com.students.studentProfile.model;
 
+
+import jakarta.validation.constraints.*;
+
 import java.util.List;
+
+/**
+ * Student model representing the data structure.
+ */
+
 
 public class Student {
 
+    @Min(value = 1, message = "ID must be greater than 0")
     private  int id;
+
+    @NotBlank(message = "Name cannot be blank")
+    @Size(min=2,max=50,message = "Name must be between 2 to 50 characters")
     private String name;
+
+    @Email(message = "Email must be in correct format")
+    @NotBlank(message = "Email cannot be blank")
     private  String email;
-    private  int phone;
+
+    @Pattern(regexp = "\\d{10}", message = "Phone number must be exactly 10 digits")
+    private String phone;
+
+    @NotBlank(message = "Batch cannot be blank")
     private String batch;
+
+    @Min(value = 1, message = "Age must be at least 1")
+    @Max(value = 100, message = "Age must be less than or equal to 100")
     private int age;
+
+    @NotBlank(message = "Date of birth cannot be blank")
     private  String dateOfBirth;
+
+
+    @NotNull(message = "Course list cannot be null")
     private List<String> courseList;
 
     // Getter and Setter of id
@@ -41,11 +68,11 @@ public class Student {
     }
 
     // Getter and Setter of phone
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

@@ -2,6 +2,7 @@ package com.students.studentProfile.controller;
 
 import com.students.studentProfile.model.Student;
 import com.students.studentProfile.service.StudentService;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class StudentData {
      * @return Success flag.
      */
     @PostMapping
-    public boolean createStudent(@RequestBody Student newStudent){
+    public boolean createStudent(@Valid @RequestBody Student newStudent){
         logger.info("inside create student");
         return service.createStudent(newStudent);
     }
