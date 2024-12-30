@@ -12,9 +12,7 @@ import java.util.List;
 
 public class Student {
 
-    @Min(value = 1, message = "ID must be greater than 0")
-    private  int id;
-
+    
     @NotBlank(message = "Name cannot be blank")
     @Size(min=2,max=50,message = "Name must be between 2 to 50 characters")
     private String name;
@@ -39,15 +37,7 @@ public class Student {
 
     @NotNull(message = "Course list cannot be null")
     private List<String> courseList;
-
-    // Getter and Setter of id
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+     
 
     // Getter and Setter of name
     public String getName() {
