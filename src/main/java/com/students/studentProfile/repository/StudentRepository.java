@@ -15,7 +15,7 @@ public class StudentRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<Student> getAllStudents() {
-        String SELECT_QUERY = "SELECT * FROM StudentDetails;";
+        String SELECT_QUERY = "SELECT * FROM Students;";
         return jdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
             Student student = new Student();
             student.setName(rs.getString("name"));
