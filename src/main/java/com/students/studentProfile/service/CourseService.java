@@ -17,6 +17,8 @@ public class CourseService {
         return courseRepository.getAllCourses();
     }
 
+    public boolean createCourse(Course course){return courseRepository.insertCourse(course);}
+
     public Course getCourseById(Integer id) {
         return courseRepository.getCourseById(id);
     }

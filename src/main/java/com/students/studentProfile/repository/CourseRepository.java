@@ -1,6 +1,7 @@
 package com.students.studentProfile.repository;
 
 import com.students.studentProfile.model.Course;
+import com.students.studentProfile.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -25,6 +26,10 @@ public class CourseRepository {
         });
     }
 
+    public boolean insertCourse(Course course) {
+        String INSERT_QUERY = "INSERT INTO Courses (course_id, course_code, course_name, description, credits) VALUES (?, ?, ?, ?, ?);";
+        return jdbcTemplate.update(INSERT_QUERY, course.getCourseId(), course.getCourseCode(),course.getCourseName(),course.getDescription(), course.getCredits())>0;
+    }
     public Course getCourseById(Integer course_id) {
         String SELECT_QUERY = "SELECT * FROM Courses WHERE course_id = ?;";
         return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
