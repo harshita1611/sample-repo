@@ -6,8 +6,10 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.time.format.DateTimeFormatter;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -80,6 +82,15 @@ public class StudentData {
     public Student deleteStudentDetail(@PathVariable("studentId") Integer studentId){
         logger.info("Deleting student with ID: {}", studentId);
         return service.deleteStudent(studentId);
+    }
+
+    @GetMapping("/age/{dob}")
+    public int getAgeFromDOB(@PathVariable("dob") String dob) {
+        logger.info("Deriving age from DOB {}",dob);
+        logger.info("{}",LocalDate.now());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate parsedDob = LocalDate.parse(dob, formatter);
+        return service.DeriveAge(parsedDob);
     }
 
 }

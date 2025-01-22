@@ -3,6 +3,7 @@ package com.students.studentProfile.model;
 
 import jakarta.validation.constraints.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -31,8 +32,8 @@ public class Student {
     @Max(value = 100, message = "Age must be less than or equal to 100")
     private int age;
 
-    @NotBlank(message = "Date of birth cannot be blank")
-    private  String dateOfBirth;
+    @NotNull(message = "Date of birth cannot be blank")
+    private LocalDate dateOfBirth;
 
 
     @NotNull(message = "Course list cannot be null")
@@ -85,11 +86,11 @@ public class Student {
     }
 
     // Getter and Setter of date of birth
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

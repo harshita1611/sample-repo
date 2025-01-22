@@ -23,7 +23,7 @@ public class StudentRepository {
             student.setPhone(rs.getString("phone"));
             student.setBatch(rs.getString("batch"));
             student.setAge(rs.getInt("age"));
-            student.setDateOfBirth(rs.getString("dateOfBirth"));
+            student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
             student.setCourseList(List.of(rs.getString("courseList").split(",")));
             return student;
         });
@@ -43,7 +43,7 @@ public class StudentRepository {
             student.setPhone(rs.getString("phone"));
             student.setBatch(rs.getString("batch"));
             student.setAge(rs.getInt("age"));
-            student.setDateOfBirth(rs.getString("dateOfBirth"));
+            student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
             student.setCourseList(List.of(rs.getString("courseList").split(",")));
             return student;
         }, id);
