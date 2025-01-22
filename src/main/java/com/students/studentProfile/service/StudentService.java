@@ -43,7 +43,7 @@ public class StudentService {
     }
 
     public int DeriveAge(LocalDate dob){
-        logger.info("inside derive age service");
+        logger.info("inside derive age function");
         if (dob==null){
             throw new IllegalArgumentException("DOB cannot be null");
         }

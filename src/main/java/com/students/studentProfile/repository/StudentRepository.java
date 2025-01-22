@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +32,9 @@ public class StudentRepository {
     }
 
     public boolean insertStudent(Student student) {
+        int derivedAge= Period.between(student.getDateOfBirth(),LocalDate.now()).getYears();
         String INSERT_QUERY = "INSERT INTO Students (name, email, phone, batch, age, dateOfBirth, courseList) VALUES (?, ?, ?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch(), student.getAge(), student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
+        return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
     }
 
     public Student getStudentById(Integer id) {

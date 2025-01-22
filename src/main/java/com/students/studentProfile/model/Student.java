@@ -28,8 +28,7 @@ public class Student {
     @NotBlank(message = "Batch cannot be blank")
     private String batch;
 
-    @Min(value = 1, message = "Age must be at least 1")
-    @Max(value = 100, message = "Age must be less than or equal to 100")
+
     private int age;
 
     @NotNull(message = "Date of birth cannot be blank")
