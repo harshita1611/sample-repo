@@ -1,29 +1,36 @@
 package com.students.studentProfile.repository;
 
+import com.students.studentProfile.enums.BatchEnum;
 import com.students.studentProfile.model.Student;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 import java.util.Map;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 @Repository
 public class StudentRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    private final Logger logger = LoggerFactory.getLogger(StudentRepository.class);
 
     public List<Student> getAllStudents() {
         String SELECT_QUERY = "SELECT * FROM Students;";
+
         return jdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
             Student student = new Student();
             student.setName(rs.getString("name"));
             student.setEmail(rs.getString("email"));
             student.setPhone(rs.getString("phone"));
-            student.setBatch(rs.getString("batch"));
+            student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
             student.setAge(rs.getInt("age"));
             student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
             student.setCourseList(List.of(rs.getString("courseList").split(",")));
@@ -32,9 +39,11 @@ public class StudentRepository {
     }
 
     public boolean insertStudent(Student student) {
+        logger.info("inside student repo to create new student");
         int derivedAge= Period.between(student.getDateOfBirth(),LocalDate.now()).getYears();
+        logger.info(student.getBatch().name());
         String INSERT_QUERY = "INSERT INTO Students (name, email, phone, batch, age, dateOfBirth, courseList) VALUES (?, ?, ?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
+        return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch().name(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
     }
 
     public Student getStudentById(Integer id) {
@@ -44,7 +53,7 @@ public class StudentRepository {
             student.setName(rs.getString("name"));
             student.setEmail(rs.getString("email"));
             student.setPhone(rs.getString("phone"));
-            student.setBatch(rs.getString("batch"));
+            student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
             student.setAge(rs.getInt("age"));
             student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
             student.setCourseList(List.of(rs.getString("courseList").split(",")));

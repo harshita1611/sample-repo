@@ -2,9 +2,11 @@ package com.students.studentProfile.model;
 
 
 import jakarta.validation.constraints.*;
-
+import com.students.studentProfile.enums.BatchEnum;
 import java.time.LocalDate;
 import java.util.List;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 
 /**
  * Student model representing the data structure.
@@ -25,8 +27,8 @@ public class Student {
     @Pattern(regexp = "\\d{10}", message = "Phone number must be exactly 10 digits")
     private String phone;
 
-    @NotBlank(message = "Batch cannot be blank")
-    private String batch;
+    @Enumerated(EnumType.STRING)
+    private BatchEnum batch;
 
 
     private int age;
@@ -67,11 +69,11 @@ public class Student {
     }
 
     // Getter and Setter of batch
-    public String getBatch() {
+    public BatchEnum getBatch() {
         return batch;
     }
 
-    public void setBatch(String batch) {
+    public void setBatch(BatchEnum batch) {
         this.batch = batch;
     }
 
