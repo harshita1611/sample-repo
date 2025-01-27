@@ -16,6 +16,7 @@ public class StudentService {
 
     @Autowired
     private  StudentRepository repository;
+
     private final Logger logger= LoggerFactory.getLogger(StudentService.class);
 
     public List<Student> getAllStudents() {

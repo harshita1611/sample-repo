@@ -21,6 +21,7 @@ import java.util.Map;
         @Autowired
         private CourseService courseService;
 
+
         @GetMapping
         public ResponseEntity<List<Course>> getAllCourses() {
             logger.info("Fetching all courses");
