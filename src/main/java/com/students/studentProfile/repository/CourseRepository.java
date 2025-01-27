@@ -13,6 +13,10 @@ public class CourseRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    /**
+     * get list of all courses
+     * @return list of all courses and all other details
+     */
     public List<Course> getAllCourses(){
         String sql="Select * from Courses";
         return jdbcTemplate.query(sql,(rs, rowNum) -> {
@@ -26,10 +30,23 @@ public class CourseRepository {
         });
     }
 
+    /**
+     * Add a new course
+     *
+     * @param course
+     * @return true if course is added successfully else false
+     */
     public boolean insertCourse(Course course) {
         String INSERT_QUERY = "INSERT INTO Courses (course_id, course_code, course_name, description, credits) VALUES (?, ?, ?, ?, ?);";
         return jdbcTemplate.update(INSERT_QUERY, course.getCourseId(), course.getCourseCode(),course.getCourseName(),course.getDescription(), course.getCredits())>0;
     }
+
+    /**
+     * get all deails of a course with particular id
+     *
+     * @param course_id
+     * @return
+     */
     public Course getCourseById(Integer course_id) {
         String SELECT_QUERY = "SELECT * FROM Courses WHERE course_id = ?;";
         return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
@@ -43,6 +60,13 @@ public class CourseRepository {
         }, course_id);
     }
 
+
+    /**
+     * get all students enrolled in a particular course
+     *
+     * @param courseId
+     * @return
+     */
     public List<Map<String, Object>> getCourseStudents(Integer courseId) {
         String sql = """
             SELECT 

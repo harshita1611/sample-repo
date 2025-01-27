@@ -22,6 +22,11 @@ public class StudentRepository {
     private JdbcTemplate jdbcTemplate;
     private final Logger logger = LoggerFactory.getLogger(StudentRepository.class);
 
+    /**
+     * Get list of all students
+     *
+     * @return all details of all students
+     */
     public List<Student> getAllStudents() {
         String SELECT_QUERY = "SELECT * FROM Students;";
 
@@ -38,6 +43,12 @@ public class StudentRepository {
         });
     }
 
+    /**
+     * Add a new student to the database
+     *
+     * @param student
+     * @return
+     */
     public boolean insertStudent(Student student) {
         logger.info("inside student repo to create new student");
         int derivedAge= Period.between(student.getDateOfBirth(),LocalDate.now()).getYears();
@@ -46,6 +57,12 @@ public class StudentRepository {
         return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch().name(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
     }
 
+    /**
+     * get details of a particular student
+     *
+     * @param id
+     * @return
+     */
     public Student getStudentById(Integer id) {
         String SELECT_QUERY = "SELECT * FROM Students WHERE id = ?;";
         return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
@@ -61,16 +78,35 @@ public class StudentRepository {
         }, id);
     }
 
+    /**
+     * Update details of a student
+     *
+     * @param id
+     * @param updatedEntry
+     * @return
+     */
     public boolean updateStudentById(Integer id, Student updatedEntry) {
         String UPDATE_QUERY = "UPDATE Students SET name = ?, email = ?, phone = ?, batch = ?, age = ?, dateOfBirth = ?, courseList = ? WHERE id = ?;";
         return jdbcTemplate.update(UPDATE_QUERY, updatedEntry.getName(), updatedEntry.getEmail(), updatedEntry.getPhone(), updatedEntry.getBatch(), updatedEntry.getAge(), updatedEntry.getDateOfBirth(), String.join(",", updatedEntry.getCourseList()), id) > 0;
     }
 
+    /**
+     * Delete all details of a particular student
+     *
+     * @param id
+     * @return
+     */
     public boolean deleteStudentById(Integer id) {
         String DELETE_QUERY = "DELETE FROM Students WHERE id = ?;";
         return jdbcTemplate.update(DELETE_QUERY, id) > 0;
     }
 
+    /**
+     * get list of courses a particular student has enrolled in
+     *
+     * @param studentId
+     * @return
+     */
     public List<Map<String, Object>> getStudentCourses(Integer studentId) {
         String sql = """
             SELECT c.course_code, c.course_name, b.batch_code, i.name as instructor_name, 

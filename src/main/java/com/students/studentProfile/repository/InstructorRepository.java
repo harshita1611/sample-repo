@@ -13,6 +13,12 @@ public class InstructorRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+
+    /**
+     * get all details of all instructors
+     *
+     * @return
+     */
     public List<Instructor> getAllInstructors() {
         String SELECT_QUERY = "SELECT * FROM Instructors;";
         return jdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
@@ -26,6 +32,13 @@ public class InstructorRepository {
             return instructor;
         });
     }
+
+    /**
+     * get all details of a particular instructor
+     *
+     * @param instructorId
+     * @return
+     */
 
     public Instructor getInstructorById(Integer instructorId) {
         String SELECT_QUERY = "SELECT * FROM Instructors WHERE instructor_id = ?;";
@@ -41,6 +54,13 @@ public class InstructorRepository {
         }, instructorId);
     }
 
+
+    /**
+     * add a new instructor to the database
+     *
+     * @param instructor
+     * @return
+     */
     public boolean insertInstructor(Instructor instructor) {
         String INSERT_QUERY = "INSERT INTO Instructors (name, email, phone, department, joining_date) VALUES (?, ?, ?, ?, ?);";
         return jdbcTemplate.update(INSERT_QUERY,
@@ -51,6 +71,13 @@ public class InstructorRepository {
                 instructor.getJoiningDate()) > 0;
     }
 
+    /**
+     * Update details of a particular instructor
+     *
+     * @param instructorId
+     * @param updatedInstructor
+     * @return
+     */
     public boolean updateInstructorById(Integer instructorId, Instructor updatedInstructor) {
         String UPDATE_QUERY = "UPDATE Instructors SET name = ?, email = ?, phone = ?, department = ?, joining_date = ? WHERE instructor_id = ?;";
         return jdbcTemplate.update(UPDATE_QUERY,
@@ -62,6 +89,12 @@ public class InstructorRepository {
                 instructorId) > 0;
     }
 
+    /**
+     * delete all details of a particular instructor
+     *
+     * @param instructorId
+     * @return
+     */
     public boolean deleteInstructorById(Integer instructorId) {
         String DELETE_QUERY = "DELETE FROM Instructors WHERE instructor_id = ?;";
         return jdbcTemplate.update(DELETE_QUERY, instructorId) > 0;

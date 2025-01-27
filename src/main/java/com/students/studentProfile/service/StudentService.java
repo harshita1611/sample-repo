@@ -18,22 +18,49 @@ public class StudentService {
     private  StudentRepository repository;
     private final Logger logger= LoggerFactory.getLogger(StudentService.class);
 
+    /**
+     * get list of all students - service layer
+     * @return
+     */
     public List<Student> getAllStudents() {
         return repository.getAllStudents();
     }
 
+    /**
+     * Add a new student - service layer
+     *
+     * @param student
+     * @return
+     */
     public boolean createStudent(Student student) {
         return repository.insertStudent(student);
     }
 
+    /**
+     * get details of a particular Student - service layer
+     *
+     * @param id
+     * @return
+     */
     public Student getStudentById(Integer id) {
         return repository.getStudentById(id);
     }
 
+    /**
+     * update details of a particular student - service layer
+     *
+     * @param id
+     * @param updatedEntry
+     */
     public void updateStudentById(Integer id, Student updatedEntry) {
         repository.updateStudentById(id, updatedEntry);
     }
 
+    /**
+     * delete a particular student - service layer
+     * @param id
+     * @return
+     */
     public Student deleteStudent(Integer id) {
         Student student = repository.getStudentById(id);
         if (repository.deleteStudentById(id)) {
@@ -42,6 +69,11 @@ public class StudentService {
         return null;
     }
 
+    /**
+     * Derive age from dob to save payload
+     * @param dob
+     * @return
+     */
     public int DeriveAge(LocalDate dob){
         logger.info("inside derive age function");
         if (dob==null){
