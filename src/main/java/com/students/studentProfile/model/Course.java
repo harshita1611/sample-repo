@@ -3,6 +3,9 @@ package com.students.studentProfile.model;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+/**
+ * Course model representing the data structure.
+ */
 public class Course {
     private Integer courseId;
 
