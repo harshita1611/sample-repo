@@ -78,11 +78,11 @@ public class CourseRepository {
                 s.age, 
                 s.dateOfBirth
             FROM 
-                students s
+                student_management.students s
             JOIN 
-                course_enrollments ce ON s.id = ce.student_id
+                teacher_management.teacher t ON s.id = t.student_id
             WHERE 
-                ce.course_id = ?
+                t.teacher_id = ?
         """;
 
         return jdbcTemplate.queryForList(sql, courseId);
