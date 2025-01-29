@@ -65,10 +65,10 @@ import java.util.Map;
          * @param id
          * @return
          */
-        @GetMapping("/{id}/students")
-        public ResponseEntity<List<Map<String, Object>>> getCourseStudents(@PathVariable Integer id) {
-            logger.info("Fetching students for course with id: {}", id);
-            return ResponseEntity.ok(courseService.getCourseStudents(id));
-        }
+//        @GetMapping("/{id}/students")
+//        public ResponseEntity<List<Map<String, Object>>> getCourseStudents(@PathVariable Integer id) {
+//            logger.info("Fetching students for course with id: {}", id);
+//            return ResponseEntity.ok(courseService.getCourseStudents(id));
+//        }
     }
 

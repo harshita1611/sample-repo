@@ -2,6 +2,7 @@ package com.students.studentProfile.repository;
 
 import com.students.studentProfile.model.Instructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,8 +11,13 @@ import java.util.List;
 @Repository
 public class InstructorRepository {
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate mysqlJdbcTemplate;
+    private final JdbcTemplate postgresJdbcTemplate;
+
+    public InstructorRepository(@Qualifier("mysqlJdbcTemplate") JdbcTemplate mysqlJdbcTemplate, @Qualifier("postgresJdbcTemplate")JdbcTemplate postgresJdbcTemplate){
+        this.mysqlJdbcTemplate=mysqlJdbcTemplate;
+        this.postgresJdbcTemplate=postgresJdbcTemplate;
+    }
 
 
     /**
@@ -21,7 +27,7 @@ public class InstructorRepository {
      */
     public List<Instructor> getAllInstructors() {
         String SELECT_QUERY = "SELECT * FROM Instructors;";
-        return jdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
+        return mysqlJdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
             Instructor instructor = new Instructor();
             instructor.setInstructorId(rs.getInt("instructor_id"));
             instructor.setName(rs.getString("name"));
@@ -42,7 +48,7 @@ public class InstructorRepository {
 
     public Instructor getInstructorById(Integer instructorId) {
         String SELECT_QUERY = "SELECT * FROM Instructors WHERE instructor_id = ?;";
-        return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
+        return mysqlJdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
             Instructor instructor = new Instructor();
             instructor.setInstructorId(rs.getInt("instructor_id"));
             instructor.setName(rs.getString("name"));
@@ -63,7 +69,7 @@ public class InstructorRepository {
      */
     public boolean insertInstructor(Instructor instructor) {
         String INSERT_QUERY = "INSERT INTO Instructors (name, email, phone, department, joining_date) VALUES (?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(INSERT_QUERY,
+        return mysqlJdbcTemplate.update(INSERT_QUERY,
                 instructor.getName(),
                 instructor.getEmail(),
                 instructor.getPhone(),
@@ -80,7 +86,7 @@ public class InstructorRepository {
      */
     public boolean updateInstructorById(Integer instructorId, Instructor updatedInstructor) {
         String UPDATE_QUERY = "UPDATE Instructors SET name = ?, email = ?, phone = ?, department = ?, joining_date = ? WHERE instructor_id = ?;";
-        return jdbcTemplate.update(UPDATE_QUERY,
+        return mysqlJdbcTemplate.update(UPDATE_QUERY,
                 updatedInstructor.getName(),
                 updatedInstructor.getEmail(),
                 updatedInstructor.getPhone(),
@@ -97,7 +103,7 @@ public class InstructorRepository {
      */
     public boolean deleteInstructorById(Integer instructorId) {
         String DELETE_QUERY = "DELETE FROM Instructors WHERE instructor_id = ?;";
-        return jdbcTemplate.update(DELETE_QUERY, instructorId) > 0;
+        return mysqlJdbcTemplate.update(DELETE_QUERY, instructorId) > 0;
     }
 
 }

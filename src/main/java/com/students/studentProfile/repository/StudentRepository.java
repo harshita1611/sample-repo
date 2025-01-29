@@ -4,6 +4,7 @@ import com.students.studentProfile.enums.BatchEnum;
 import com.students.studentProfile.model.Student;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -18,8 +19,14 @@ import org.slf4j.Logger;
 @Repository
 public class StudentRepository {
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate mysqlJdbcTemplate;
+    private final JdbcTemplate postgresJdbcTemplate;
+
+    public StudentRepository(@Qualifier("mysqlJdbcTemplate") JdbcTemplate mysqlJdbcTemplate, @Qualifier("postgresJdbcTemplate")JdbcTemplate postgresJdbcTemplate){
+        this.mysqlJdbcTemplate=mysqlJdbcTemplate;
+        this.postgresJdbcTemplate=postgresJdbcTemplate;
+    }
+
     private final Logger logger = LoggerFactory.getLogger(StudentRepository.class);
 
     /**
@@ -30,7 +37,7 @@ public class StudentRepository {
     public List<Student> getAllStudents() {
         String SELECT_QUERY = "SELECT * FROM Students;";
 
-        return jdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
+        return mysqlJdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
             Student student = new Student();
             student.setName(rs.getString("name"));
             student.setEmail(rs.getString("email"));
@@ -54,7 +61,7 @@ public class StudentRepository {
         int derivedAge= Period.between(student.getDateOfBirth(),LocalDate.now()).getYears();
         logger.info(student.getBatch().name());
         String INSERT_QUERY = "INSERT INTO Students (name, email, phone, batch, age, dateOfBirth, courseList) VALUES (?, ?, ?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch().name(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
+        return mysqlJdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch().name(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
     }
 
     /**
@@ -65,7 +72,7 @@ public class StudentRepository {
      */
     public Student getStudentById(Integer id) {
         String SELECT_QUERY = "SELECT * FROM Students WHERE id = ?;";
-        return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
+        return mysqlJdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
             Student student = new Student();
             student.setName(rs.getString("name"));
             student.setEmail(rs.getString("email"));
@@ -87,7 +94,7 @@ public class StudentRepository {
      */
     public boolean updateStudentById(Integer id, Student updatedEntry) {
         String UPDATE_QUERY = "UPDATE Students SET name = ?, email = ?, phone = ?, batch = ?, age = ?, dateOfBirth = ?, courseList = ? WHERE id = ?;";
-        return jdbcTemplate.update(UPDATE_QUERY, updatedEntry.getName(), updatedEntry.getEmail(), updatedEntry.getPhone(), updatedEntry.getBatch(), updatedEntry.getAge(), updatedEntry.getDateOfBirth(), String.join(",", updatedEntry.getCourseList()), id) > 0;
+        return mysqlJdbcTemplate.update(UPDATE_QUERY, updatedEntry.getName(), updatedEntry.getEmail(), updatedEntry.getPhone(), updatedEntry.getBatch(), updatedEntry.getAge(), updatedEntry.getDateOfBirth(), String.join(",", updatedEntry.getCourseList()), id) > 0;
     }
 
     /**
@@ -98,7 +105,7 @@ public class StudentRepository {
      */
     public boolean deleteStudentById(Integer id) {
         String DELETE_QUERY = "DELETE FROM Students WHERE id = ?;";
-        return jdbcTemplate.update(DELETE_QUERY, id) > 0;
+        return mysqlJdbcTemplate.update(DELETE_QUERY, id) > 0;
     }
 
     /**
@@ -117,6 +124,6 @@ public class StudentRepository {
             JOIN Instructors i ON ce.instructor_id = i.instructor_id
             WHERE ce.student_id = ?
         """;
-        return jdbcTemplate.queryForList(sql, studentId);
+        return mysqlJdbcTemplate.queryForList(sql, studentId);
     }
 }

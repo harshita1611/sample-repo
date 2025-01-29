@@ -23,17 +23,20 @@ public class StudentData {
     private static final Logger logger = LoggerFactory.getLogger(StudentData.class);
 
     @Autowired
-    private StudentService service;
+//    private final StudentService service;
+    private  StudentService service;
 
+//    public StudentData(StudentService service){
+//        this.service=service;
+//    }
 
     /**
      * Get all students.
      * @return List of students.
      */
-    @GetMapping
     public List<Student> getAllStudents(){
         logger.info("inside get all students");
-        return service.fetchAll();
+        return service.getAllStudents();
     }
 
 
@@ -45,7 +48,7 @@ public class StudentData {
     @PostMapping
     public boolean createStudent(@Valid @RequestBody Student newStudent){
         logger.info("inside create student");
-        return service.create(newStudent);
+        return service.createStudent(newStudent);
     }
 
     /**

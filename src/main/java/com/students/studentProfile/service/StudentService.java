@@ -12,14 +12,15 @@ import java.time.Period;
 import java.util.List;
 
 @Service
-public abstract class StudentService extends AbstractBaseService<Student,Integer>{
+public class StudentService{
 
     @Autowired
-    private  final  StudentRepository repository;
+//    private  final  StudentRepository repository;
+    private StudentRepository repository;
 
-    public StudentService(StudentRepository repository){
-        this.repository=repository;
-    }
+//    public StudentService(StudentRepository repository){
+//        this.repository=repository;
+//    }
 
     private final Logger logger= LoggerFactory.getLogger(StudentService.class);
 
@@ -27,10 +28,15 @@ public abstract class StudentService extends AbstractBaseService<Student,Integer
      * get list of all students - service layer
      * @return
      */
-    @Override
-    public List<Student> fetchAll() {
+    public List<Student> getAllStudents() {
         return repository.getAllStudents();
     }
+//    @Override
+//    public List<Student> fetchAll() {
+//        return repository.getAllStudents();
+//    }
+
+
 
     /**
      * Add a new student - service layer
@@ -38,10 +44,14 @@ public abstract class StudentService extends AbstractBaseService<Student,Integer
      * @param student
      * @return
      */
-    @Override
-    public boolean create(Student student) {
+    public boolean createStudent(Student student) {
         return repository.insertStudent(student);
     }
+//    @Override
+//    public boolean create(Student student) {
+//        return repository.insertStudent(student);
+//    }
+
 
     /**
      * get details of a particular Student - service layer

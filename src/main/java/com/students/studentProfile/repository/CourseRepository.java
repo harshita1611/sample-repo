@@ -3,6 +3,7 @@ package com.students.studentProfile.repository;
 import com.students.studentProfile.model.Course;
 import com.students.studentProfile.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,16 +11,23 @@ import java.util.List;
 import java.util.Map;
 @Repository
 public class CourseRepository {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+
 
     /**
      * get list of all courses
      * @return list of all courses and all other details
      */
+    private final JdbcTemplate mysqlJdbcTemplate;
+    private final JdbcTemplate postgresJdbcTemplate;
+
+    public CourseRepository(@Qualifier("mysqlJdbcTemplate") JdbcTemplate mysqlJdbcTemplate, @Qualifier("postgresJdbcTemplate")JdbcTemplate postgresJdbcTemplate){
+        this.mysqlJdbcTemplate=mysqlJdbcTemplate;
+        this.postgresJdbcTemplate=postgresJdbcTemplate;
+    }
+
     public List<Course> getAllCourses(){
         String sql="Select * from Courses";
-        return jdbcTemplate.query(sql,(rs, rowNum) -> {
+        return mysqlJdbcTemplate.query(sql,(rs, rowNum) -> {
             Course course = new Course();
             course.setCourseId(rs.getInt("course_id"));
             course.setCourseCode(rs.getString("course_code"));
@@ -38,7 +46,7 @@ public class CourseRepository {
      */
     public boolean insertCourse(Course course) {
         String INSERT_QUERY = "INSERT INTO Courses (course_id, course_code, course_name, description, credits) VALUES (?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(INSERT_QUERY, course.getCourseId(), course.getCourseCode(),course.getCourseName(),course.getDescription(), course.getCredits())>0;
+        return mysqlJdbcTemplate.update(INSERT_QUERY, course.getCourseId(), course.getCourseCode(),course.getCourseName(),course.getDescription(), course.getCredits())>0;
     }
 
     /**
@@ -49,7 +57,7 @@ public class CourseRepository {
      */
     public Course getCourseById(Integer course_id) {
         String SELECT_QUERY = "SELECT * FROM Courses WHERE course_id = ?;";
-        return jdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
+        return mysqlJdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
             Course course = new Course();
             course.setCourseId(rs.getInt("course_id"));
             course.setCourseCode(rs.getString("course_code"));
@@ -67,26 +75,25 @@ public class CourseRepository {
      * @param courseId
      * @return
      */
-    public List<Map<String, Object>> getCourseStudents(Integer courseId) {
-        String sql = """
-            SELECT 
-                s.id AS studentId, 
-                s.name, 
-                s.email, 
-                s.phone, 
-                s.batch, 
-                s.age, 
-                s.dateOfBirth
-            FROM 
-                student_management.students s
-            JOIN 
-                teacher_management.teacher t ON s.id = t.student_id
-            WHERE 
-                t.teacher_id = ?
-        """;
-
-        return jdbcTemplate.queryForList(sql, courseId);
-    }
+//    public List<Map<String, Object>> getCourseStudents(Integer courseId) {
+//        String sql = """
+//            SELECT
+//                s.id AS studentId,
+//                s.name,
+//                s.email,
+//                s.phone,
+//                s.batch,
+//                s.age,
+//                s.dateOfBirth
+//            FROM
+//                student_management.students s
+//            s.id IN (SELECT * FROM postgres.teacher WHERE teacher_id=?);
+//        """;
+//
+//        List<Map<String,Object>> students =jdbcTemplate.queryForList(sql, courseId);
+//
+//        return students;
+//    }
 
 
 }
