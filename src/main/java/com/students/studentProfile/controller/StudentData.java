@@ -33,7 +33,7 @@ public class StudentData {
     @GetMapping
     public List<Student> getAllStudents(){
         logger.info("inside get all students");
-        return service.getAllStudents();
+        return service.fetchAll();
     }
 
 
@@ -45,7 +45,7 @@ public class StudentData {
     @PostMapping
     public boolean createStudent(@Valid @RequestBody Student newStudent){
         logger.info("inside create student");
-        return service.createStudent(newStudent);
+        return service.create(newStudent);
     }
 
     /**
