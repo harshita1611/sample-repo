@@ -46,8 +46,8 @@ public class CourseService {
      * @param courseId
      * @return
      */
-//    public List<Map<String, Object>> getCourseStudents(Integer courseId) {
-//        return courseRepository.getCourseStudents(courseId);
-//    }
+    public List<Map<String, Object>> getCourseStudents(Integer courseId) {
+        return courseRepository.getCourseStudents(courseId);
+    }
 }
 

@@ -1,17 +1,24 @@
 package com.students.studentProfile.repository;
 
+import com.students.studentProfile.controller.CourseController;
 import com.students.studentProfile.model.Course;
 import com.students.studentProfile.model.Student;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 @Repository
 public class CourseRepository {
 
+    private final Logger logger = LoggerFactory.getLogger(CourseController.class);
 
     /**
      * get list of all courses
@@ -72,28 +79,30 @@ public class CourseRepository {
     /**
      * get all students enrolled in a particular course
      *
-     * @param courseId
+     * @param teacher_id
      * @return
      */
-//    public List<Map<String, Object>> getCourseStudents(Integer courseId) {
-//        String sql = """
-//            SELECT
-//                s.id AS studentId,
-//                s.name,
-//                s.email,
-//                s.phone,
-//                s.batch,
-//                s.age,
-//                s.dateOfBirth
-//            FROM
-//                student_management.students s
-//            s.id IN (SELECT * FROM postgres.teacher WHERE teacher_id=?);
-//        """;
-//
-//        List<Map<String,Object>> students =jdbcTemplate.queryForList(sql, courseId);
-//
-//        return students;
-//    }
+    public List<Map<String, Object>> getCourseStudents(Integer teacher_id) {
+        String postgres="Select * from teacher where teacher_id=?";
+
+        List<Map<String,Object>> teacher=postgresJdbcTemplate.queryForList(postgres,teacher_id);
+
+
+        List<Integer> studentIds = new ArrayList<>();
+        for(Map<String,Object> row:teacher){
+            Object StudentIdObj = row.get("student_id");
+            if (StudentIdObj!=null){
+                studentIds.add(Integer.parseInt(StudentIdObj.toString()));
+            }
+        }
+        logger.info("{}",studentIds);
+        String sql =String.format("SELECT * FROM students WHERE id IN (%s)",studentIds.stream().map(String::valueOf).collect(Collectors.joining(",")));
+        logger.info("{}",sql);
+        List<Map<String,Object>> students=mysqlJdbcTemplate.queryForList(sql);
+        logger.info("Students for teacher_id {}: {}", teacher_id, students);
+
+        return students;
+    }
 
 
 }
