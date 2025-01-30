@@ -1,12 +1,15 @@
 package com.students.studentProfile.repository;
 
 import com.students.studentProfile.enums.BatchEnum;
+import com.students.studentProfile.enums.BatchEnumMap;
 import com.students.studentProfile.model.Student;
+import com.students.studentProfile.service.StudentService;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
 
 
 import java.time.LocalDate;
@@ -20,11 +23,10 @@ import org.slf4j.Logger;
 public class StudentRepository {
 
     private final JdbcTemplate mysqlJdbcTemplate;
-    private final JdbcTemplate postgresJdbcTemplate;
+
 
     public StudentRepository(@Qualifier("mysqlJdbcTemplate") JdbcTemplate mysqlJdbcTemplate, @Qualifier("postgresJdbcTemplate")JdbcTemplate postgresJdbcTemplate){
         this.mysqlJdbcTemplate=mysqlJdbcTemplate;
-        this.postgresJdbcTemplate=postgresJdbcTemplate;
     }
 
     private final Logger logger = LoggerFactory.getLogger(StudentRepository.class);
@@ -56,12 +58,16 @@ public class StudentRepository {
      * @param student
      * @return
      */
+
     public boolean insertStudent(Student student) {
         logger.info("inside student repo to create new student");
         int derivedAge= Period.between(student.getDateOfBirth(),LocalDate.now()).getYears();
-        logger.info(student.getBatch().name());
+        logger.info("batchnum:{}",student.getBatchNumber());
+        logger.info("log{}",getEnumBatchFromNumber((Integer) student.getBatchNumber()));
+        String derivedBatch=getEnumBatchFromNumber((Integer) student.getBatchNumber()).name();
+        logger.info("batch:{}",derivedBatch);
         String INSERT_QUERY = "INSERT INTO Students (name, email, phone, batch, age, dateOfBirth, courseList) VALUES (?, ?, ?, ?, ?, ?, ?);";
-        return mysqlJdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), student.getBatch().name(), derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
+        return mysqlJdbcTemplate.update(INSERT_QUERY, student.getName(), student.getEmail(), student.getPhone(), derivedBatch, derivedAge, student.getDateOfBirth(), String.join(",", student.getCourseList())) > 0;
     }
 
     /**
@@ -125,5 +131,16 @@ public class StudentRepository {
             WHERE ce.student_id = ?
         """;
         return mysqlJdbcTemplate.queryForList(sql, studentId);
+    }
+
+    public BatchEnum getEnumBatchFromNumber(Integer number) {
+        for (Map.Entry<BatchEnum, Integer> entry : BatchEnumMap.batches.entrySet()) {
+            if (entry.getValue().equals(number)) {
+                logger.info("Mapped number {} to BatchEnum {}", number, entry.getKey());
+                return entry.getKey();
+            }
+        }
+        logger.error("Invalid batch number: {}", number);
+        throw new IllegalArgumentException("Invalid batch number: " + number);
     }
 }

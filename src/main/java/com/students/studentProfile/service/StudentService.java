@@ -1,5 +1,7 @@
 package com.students.studentProfile.service;
 
+import com.students.studentProfile.enums.BatchEnum;
+import com.students.studentProfile.enums.BatchEnumMap;
 import com.students.studentProfile.model.Student;
 import com.students.studentProfile.repository.StudentRepository;
 import org.slf4j.LoggerFactory;
@@ -10,9 +12,12 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class StudentService{
+
+    private BatchEnumMap batchEnumMap;
 
     @Autowired
 //    private  final  StudentRepository repository;
@@ -45,6 +50,7 @@ public class StudentService{
      * @return
      */
     public boolean createStudent(Student student) {
+        logger.info("service layer");
         return repository.insertStudent(student);
     }
 //    @Override
@@ -99,5 +105,9 @@ public class StudentService{
         logger.info(" the age is {}",Period.between(dob,LocalDate.now()).getYears());
         return Period.between(dob,LocalDate.now()).getYears();
     }
+
+
+
+
 
 }

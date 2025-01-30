@@ -27,9 +27,10 @@ public class Student {
     @Pattern(regexp = "\\d{10}", message = "Phone number must be exactly 10 digits")
     private String phone;
 
+    private Integer batchNumber;
+
     @Enumerated(EnumType.STRING)
     private BatchEnum batch;
-
 
     private int age;
 
@@ -66,6 +67,15 @@ public class Student {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+
+    public Integer getBatchNumber() {
+        return batchNumber;
+    }
+
+    public void setBatchNumber(Integer batchNumber) {
+        this.batchNumber = batchNumber;
     }
 
     // Getter and Setter of batch

@@ -48,6 +48,7 @@ public class StudentData {
     @PostMapping
     public boolean createStudent(@Valid @RequestBody Student newStudent){
         logger.info("inside create student");
+        logger.info("Inside create student with batch number: {}", newStudent.getBatchNumber());
         return service.createStudent(newStudent);
     }
 
