@@ -34,6 +34,7 @@ public class StudentData {
      * Get all students.
      * @return List of students.
      */
+    @GetMapping
     public List<Student> getAllStudents(){
         logger.info("inside get all students");
         return service.getAllStudents();

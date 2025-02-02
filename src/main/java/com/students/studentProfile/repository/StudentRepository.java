@@ -99,8 +99,10 @@ public class StudentRepository {
      * @return
      */
     public boolean updateStudentById(Integer id, Student updatedEntry) {
+        int derivedAge= Period.between(updatedEntry.getDateOfBirth(),LocalDate.now()).getYears();
+        String derivedBatch=getEnumBatchFromNumber((Integer) updatedEntry.getBatchNumber()).name();
         String UPDATE_QUERY = "UPDATE Students SET name = ?, email = ?, phone = ?, batch = ?, age = ?, dateOfBirth = ?, courseList = ? WHERE id = ?;";
-        return mysqlJdbcTemplate.update(UPDATE_QUERY, updatedEntry.getName(), updatedEntry.getEmail(), updatedEntry.getPhone(), updatedEntry.getBatch(), updatedEntry.getAge(), updatedEntry.getDateOfBirth(), String.join(",", updatedEntry.getCourseList()), id) > 0;
+        return mysqlJdbcTemplate.update(UPDATE_QUERY, updatedEntry.getName(), updatedEntry.getEmail(), updatedEntry.getPhone(), derivedBatch, derivedAge, updatedEntry.getDateOfBirth(), String.join(",", updatedEntry.getCourseList()), id) > 0;
     }
 
     /**
