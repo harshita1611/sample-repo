@@ -1,0 +1,144 @@
+2025-02-10T16:33:55.804+05:30  INFO 95835 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 95835 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:33:55.805+05:30  INFO 95835 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:33:56.529+05:30  INFO 95835 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:33:56.538+05:30  INFO 95835 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:33:56.538+05:30  INFO 95835 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:33:56.569+05:30  INFO 95835 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:33:56.569+05:30  INFO 95835 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 732 ms
+2025-02-10T16:33:57.018+05:30  INFO 95835 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:33:57.024+05:30  INFO 95835 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.491 seconds (process running for 1.728)
+2025-02-10T16:36:31.432+05:30  INFO 95835 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:36:31.438+05:30  INFO 95835 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:36:32.646+05:30  INFO 97551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 97551 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:36:32.647+05:30 DEBUG 97551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:36:32.647+05:30  INFO 97551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:36:33.337+05:30  INFO 97551 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:36:33.344+05:30  INFO 97551 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:36:33.345+05:30  INFO 97551 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:36:33.373+05:30  INFO 97551 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:36:33.373+05:30  INFO 97551 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2025-02-10T16:36:33.782+05:30  INFO 97551 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:36:33.789+05:30  INFO 97551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.421 seconds (process running for 1.655)
+2025-02-10T16:37:38.546+05:30  INFO 97551 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:37:38.552+05:30  INFO 97551 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:49:19.518+05:30  INFO 6320 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 6320 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:49:19.519+05:30 DEBUG 6320 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:49:19.519+05:30  INFO 6320 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:49:20.229+05:30  INFO 6320 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:49:20.236+05:30  INFO 6320 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:49:20.236+05:30  INFO 6320 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:49:20.264+05:30  INFO 6320 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:49:20.264+05:30  INFO 6320 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2025-02-10T16:49:20.686+05:30  WARN 6320 --- [studentProfile] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-10T16:49:20.695+05:30  INFO 6320 --- [studentProfile] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-10T16:49:20.703+05:30 ERROR 6320 --- [studentProfile] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-02-10T16:49:28.713+05:30  INFO 6443 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 6443 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:49:28.714+05:30 DEBUG 6443 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:49:28.714+05:30  INFO 6443 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:49:29.388+05:30  INFO 6443 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:49:29.397+05:30  INFO 6443 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:49:29.397+05:30  INFO 6443 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:49:29.425+05:30  INFO 6443 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:49:29.425+05:30  INFO 6443 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 678 ms
+2025-02-10T16:49:29.843+05:30  INFO 6443 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:49:29.850+05:30  INFO 6443 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.384 seconds (process running for 1.604)
+2025-02-10T16:50:05.124+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T16:50:05.125+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T16:50:05.125+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-02-10T16:50:05.447+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 240 ms
+2025-02-10T16:50:10.211+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-4] c.s.s.controller.StudentData             : inside get all students
+2025-02-10T16:50:10.222+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T16:50:10.497+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2485c843
+2025-02-10T16:50:10.498+05:30  INFO 6443 --- [studentProfile] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T16:51:59.131+05:30  INFO 6443 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:51:59.136+05:30  INFO 6443 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:51:59.138+05:30  INFO 6443 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T16:51:59.144+05:30  INFO 6443 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T16:52:00.403+05:30  INFO 8061 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 8061 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:52:00.405+05:30 DEBUG 8061 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:52:00.405+05:30  INFO 8061 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:52:01.119+05:30  INFO 8061 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:52:01.126+05:30  INFO 8061 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:52:01.126+05:30  INFO 8061 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:52:01.152+05:30  INFO 8061 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:52:01.153+05:30  INFO 8061 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+2025-02-10T16:52:01.589+05:30  INFO 8061 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:52:01.595+05:30  INFO 8061 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.478 seconds (process running for 1.714)
+2025-02-10T16:52:18.024+05:30  INFO 8061 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:52:18.030+05:30  INFO 8061 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:52:28.104+05:30  INFO 8385 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 8385 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:52:28.105+05:30 DEBUG 8385 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:52:28.105+05:30  INFO 8385 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:52:28.814+05:30  INFO 8385 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:52:28.821+05:30  INFO 8385 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:52:28.821+05:30  INFO 8385 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:52:28.848+05:30  INFO 8385 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:52:28.849+05:30  INFO 8385 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 715 ms
+2025-02-10T16:52:29.254+05:30  INFO 8385 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:52:29.260+05:30  INFO 8385 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.421 seconds (process running for 1.643)
+2025-02-10T16:52:39.729+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T16:52:39.730+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T16:52:39.731+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-10T16:52:39.749+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.StudentData             : inside get all students
+2025-02-10T16:52:39.753+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T16:52:39.953+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c384811
+2025-02-10T16:52:39.954+05:30  INFO 8385 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T16:55:26.920+05:30  INFO 8385 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:55:26.925+05:30  INFO 8385 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:55:26.927+05:30  INFO 8385 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T16:55:26.931+05:30  INFO 8385 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T16:55:28.630+05:30  INFO 10216 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 10216 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:55:28.631+05:30 DEBUG 10216 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:55:28.632+05:30  INFO 10216 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:55:29.328+05:30  INFO 10216 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:55:29.335+05:30  INFO 10216 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:55:29.335+05:30  INFO 10216 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:55:29.363+05:30  INFO 10216 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:55:29.363+05:30  INFO 10216 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 696 ms
+2025-02-10T16:55:29.791+05:30  INFO 10216 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:55:29.797+05:30  INFO 10216 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.424 seconds (process running for 1.65)
+2025-02-10T16:55:36.615+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T16:55:36.615+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T16:55:36.616+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-10T16:55:36.619+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: class org.apache.catalina.connector.RequestFacade
+2025-02-10T16:55:36.635+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.StudentData             : inside get all students
+2025-02-10T16:55:36.638+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T16:55:36.825+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a49760c
+2025-02-10T16:55:36.826+05:30  INFO 10216 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T16:55:59.421+05:30  INFO 10216 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-10T16:55:59.425+05:30  INFO 10216 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-10T16:55:59.427+05:30  INFO 10216 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T16:55:59.432+05:30  INFO 10216 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T16:56:01.078+05:30  INFO 10655 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 10655 (/Users/harshitabhambhani/Desktop/FINAL/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/FINAL)
+2025-02-10T16:56:01.079+05:30 DEBUG 10655 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-10T16:56:01.079+05:30  INFO 10655 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T16:56:01.747+05:30  INFO 10655 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T16:56:01.754+05:30  INFO 10655 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T16:56:01.754+05:30  INFO 10655 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-10T16:56:01.778+05:30  INFO 10655 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T16:56:01.779+05:30  INFO 10655 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2025-02-10T16:56:02.150+05:30  INFO 10655 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T16:56:02.155+05:30  INFO 10655 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.322 seconds (process running for 1.543)
+2025-02-10T16:56:05.420+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T16:56:05.420+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T16:56:05.421+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-10T16:56:05.424+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-10T16:56:05.440+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.StudentData             : inside get all students
+2025-02-10T16:56:05.444+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T16:56:05.647+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a49760c
+2025-02-10T16:56:05.648+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
