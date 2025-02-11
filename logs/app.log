@@ -142,3 +142,134 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-02-10T16:56:05.444+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2025-02-10T16:56:05.647+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a49760c
 2025-02-10T16:56:05.648+05:30  INFO 10655 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T11:50:17.480+05:30  INFO 57853 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 57853 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-11T11:50:17.481+05:30 DEBUG 57853 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-11T11:50:17.482+05:30  INFO 57853 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T11:50:18.174+05:30  INFO 57853 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T11:50:18.182+05:30  INFO 57853 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T11:50:18.182+05:30  INFO 57853 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-11T11:50:18.209+05:30  INFO 57853 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T11:50:18.209+05:30  INFO 57853 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 696 ms
+2025-02-11T11:50:18.631+05:30  INFO 57853 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-11T11:50:18.640+05:30  INFO 57853 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.518 seconds (process running for 1.795)
+2025-02-11T11:51:11.871+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11T11:51:11.872+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11T11:51:11.873+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-11T11:51:11.876+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:11.899+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-2] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:11.968+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-3] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:11.969+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-4] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:11.995+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:12.279+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 279 ms
+2025-02-11T11:51:14.863+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-6] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:51:14.864+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-6] c.s.s.controller.StudentData             : inside get all students
+2025-02-11T11:51:14.875+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T11:51:15.103+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58e6454d
+2025-02-11T11:51:15.105+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T11:52:59.778+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-9] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T11:53:01.084+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T11:53:01.182+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-2] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T11:53:01.549+05:30  INFO 57853 --- [studentProfile] [http-nio-8080-exec-4] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T11:56:13.544+05:30  INFO 57853 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T11:56:13.549+05:30  INFO 57853 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T11:56:13.551+05:30  INFO 57853 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T11:56:13.555+05:30  INFO 57853 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T11:56:15.233+05:30  INFO 61640 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 61640 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-11T11:56:15.234+05:30 DEBUG 61640 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-11T11:56:15.234+05:30  INFO 61640 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T11:56:15.918+05:30  INFO 61640 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T11:56:15.926+05:30  INFO 61640 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T11:56:15.926+05:30  INFO 61640 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-11T11:56:15.955+05:30  INFO 61640 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T11:56:15.955+05:30  INFO 61640 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
+2025-02-11T11:56:16.383+05:30  INFO 61640 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-11T11:56:16.389+05:30  INFO 61640 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.412 seconds (process running for 1.636)
+2025-02-11T11:56:20.795+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11T11:56:20.795+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11T11:56:20.796+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-11T11:56:20.798+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:56:20.810+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.StudentData             : inside get all students
+2025-02-11T11:56:20.812+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T11:56:21.000+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39d04649
+2025-02-11T11:56:21.001+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T11:57:33.374+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:57:33.375+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T11:57:33.384+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.controller.CourseController        : Fetching students for course with id: 5
+2025-02-11T11:57:33.387+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-11T11:57:33.473+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@11db6e2d
+2025-02-11T11:57:33.473+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-11T11:57:33.487+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.controller.CourseController        : [18, 19]
+2025-02-11T11:57:33.487+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.controller.CourseController        : SELECT * FROM students WHERE id IN (18,19)
+2025-02-11T11:57:33.491+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.controller.CourseController        : Students for teacher_id 5: [{id=18, name=Hitesh, email=hitesh@gmail.com, phone=4105341148, batch=SPRING_2025, age=21, dateOfBirth=2004-01-29, courseList=AWS,Springboot}, {id=19, name=Aastha, email=aastha@gmail.com, phone=9629089185, batch=SPRING_2024, age=20, dateOfBirth=2005-01-29, courseList=web development,ML}]
+2025-02-11T12:03:48.438+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:03:49.521+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-7] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:03:50.017+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-8] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:03:50.488+05:30  INFO 61640 --- [studentProfile] [http-nio-8080-exec-9] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:04:43.796+05:30  INFO 61640 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T12:04:43.801+05:30  INFO 61640 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T12:04:43.803+05:30  INFO 61640 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-11T12:04:43.805+05:30  INFO 61640 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-11T12:04:43.805+05:30  INFO 61640 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:04:43.813+05:30  INFO 61640 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T12:04:49.205+05:30  INFO 66923 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 66923 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-11T12:04:49.206+05:30 DEBUG 66923 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-11T12:04:49.207+05:30  INFO 66923 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T12:04:49.890+05:30  INFO 66923 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T12:04:49.897+05:30  INFO 66923 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T12:04:49.898+05:30  INFO 66923 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-11T12:04:49.924+05:30  INFO 66923 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T12:04:49.925+05:30  INFO 66923 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2025-02-11T12:04:50.339+05:30  INFO 66923 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-11T12:04:50.346+05:30  INFO 66923 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.399 seconds (process running for 1.628)
+2025-02-11T12:05:03.957+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11T12:05:03.958+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11T12:05:03.959+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-11T12:05:03.962+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-11T12:05:03.979+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.StudentData             : inside get all students
+2025-02-11T12:05:03.982+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T12:05:04.170+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3eaaa24c
+2025-02-11T12:05:04.171+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T12:09:34.611+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-2] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:09:35.491+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:09:35.607+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-6] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:09:35.881+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-7] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:17:51.049+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-9] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:17:51.443+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:17:51.821+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-3] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:17:52.014+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-2] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:18:01.896+05:30  WARN 66923 --- [studentProfile] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s507ms).
+2025-02-11T12:27:44.879+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:27:47.245+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-7] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:27:47.588+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-8] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:27:47.701+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-9] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:36:28.064+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:36:28.678+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-2] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:36:28.845+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-4] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:36:28.947+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:45:17.358+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-7] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:45:17.867+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-9] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:45:18.094+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-10] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:45:18.167+05:30  INFO 66923 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 192.168.8.164
+2025-02-11T12:45:53.480+05:30  INFO 66923 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T12:45:53.485+05:30  INFO 66923 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T12:45:53.487+05:30  INFO 66923 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T12:45:53.490+05:30  INFO 66923 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T13:06:33.430+05:30  INFO 6151 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 6151 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-11T13:06:33.431+05:30 DEBUG 6151 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-11T13:06:33.432+05:30  INFO 6151 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T13:06:34.168+05:30  INFO 6151 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-11T13:06:34.176+05:30  INFO 6151 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T13:06:34.176+05:30  INFO 6151 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-11T13:06:34.204+05:30  INFO 6151 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T13:06:34.205+05:30  INFO 6151 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2025-02-11T13:06:34.611+05:30  WARN 6151 --- [studentProfile] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 640ea8ec-aaeb-4b28-8cce-ba54d1d47a4d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-11T13:06:34.625+05:30  INFO 6151 --- [studentProfile] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-11T13:06:34.707+05:30  INFO 6151 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-11T13:06:34.717+05:30  INFO 6151 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.555 seconds (process running for 1.788)
+2025-02-11T13:11:52.021+05:30  INFO 6151 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T13:11:52.030+05:30  INFO 6151 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
