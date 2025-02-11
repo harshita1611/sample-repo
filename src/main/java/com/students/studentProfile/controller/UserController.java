@@ -21,16 +21,15 @@ public class UserController {
     private final JwtTokenProvider tokenProvider;
     private final UserService userService;
 
-    public UserController(AuthenticationManager authenticationManager, JwtTokenProvider tokenProvider,UserService userService) {
+    public UserController(AuthenticationManager authenticationManager, JwtTokenProvider tokenProvider, UserService userService) {
         this.authenticationManager = authenticationManager;
         this.tokenProvider = tokenProvider;
-        this.userService=userService;
+        this.userService = userService;
     }
 
-    @PostMapping
-    public String createNewUser(@Valid @RequestBody User newUser){
+    @PostMapping("/register")
+    public String createNewUser(@Valid @RequestBody User newUser) {
         logger.info("inside create new user");
-        // sevice layer
-        return "user created";
+        return userService.createNewUser(newUser);
     }
 }

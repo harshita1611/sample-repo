@@ -44,6 +44,9 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
+
+
+
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>javax.annotation-api</artifactId>
@@ -63,6 +66,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+
+		<!--servlet-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- JWT Token Support -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

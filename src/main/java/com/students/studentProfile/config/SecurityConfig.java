@@ -20,17 +20,15 @@ public class SecurityConfig {
     private final UserService userService;
     private final JwtTokenProvider tokenProvider;
 
-
-    public SecurityConfig(UserService userService,JwtTokenProvider tokenProvider) {
+    public SecurityConfig(UserService userService, JwtTokenProvider tokenProvider) {
         this.userService = userService;
-        this.tokenProvider=tokenProvider;
+        this.tokenProvider = tokenProvider;
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -42,21 +40,18 @@ public class SecurityConfig {
                         .requestMatchers("/students/**").hasRole("TEACHER")
                         .anyRequest().authenticated()
                 )
-                .addFilterBefore(new JwtAuthenticationFilter(tokenProvider,userService), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new JwtAuthenticationFilter("/auth/login", authenticationManager(http), tokenProvider),
+                        UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
-
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
-        return http.getSharedObject(AuthenticationManagerBuilder.class)
+        AuthenticationManagerBuilder authBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
+        authBuilder
                 .userDetailsService(userService)
-                .passwordEncoder(passwordEncoder())
-                .and()
-                .build();
+                .passwordEncoder(passwordEncoder());
+        return authBuilder.build();
     }
-
-
 }
-

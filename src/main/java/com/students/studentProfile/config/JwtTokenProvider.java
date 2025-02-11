@@ -9,6 +9,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 @Component
 public class JwtTokenProvider {
     private final Logger logger = LoggerFactory.getLogger(JwtTokenProvider.class);
@@ -19,11 +22,21 @@ public class JwtTokenProvider {
     @Value("${jwt.expiration}")
     private int jwtExpiration;
 
-    public String generateToken(Authentication authentication) {
-        String username = authentication.getName();
+    public String generateToken(String username, String role) {
+
         Date currentDate = new Date();
         Date expirationDate = new Date(currentDate.getTime() + jwtExpiration);
-        String token = Jwts.builder().setSubject(username).setIssuedAt(currentDate).setExpiration(expirationDate).signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
+
+        Map<String,Object> claims = new HashMap<>();
+        claims.put("role",role);
+
+        String token = Jwts.builder()
+                .setSubject(username)
+                .setClaims(claims)
+                .setIssuedAt(currentDate)
+                .setExpiration(expirationDate)
+                .signWith(SignatureAlgorithm.HS512, jwtSecret)
+                .compact();
         logger.info("token generated : {}", token );
         return token;
     }
