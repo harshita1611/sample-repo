@@ -24,7 +24,7 @@ public class LoggingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        System.out.println("Incoming request: " + request.getRemoteAddr());
+//        System.out.println("Incoming request: " + request.getRemoteAddr());
         logger.info("logging incoming request: {}",request.getRemoteAddr());
         chain.doFilter(request, response); // Continue request processing
     }
