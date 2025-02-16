@@ -1,5 +1,6 @@
 package com.students.studentProfile.controller;
 
+import com.students.studentProfile.dto.PaginatedResponse;
 import com.students.studentProfile.model.Student;
 import com.students.studentProfile.service.StudentService;
 import jakarta.validation.Valid;
@@ -26,18 +27,26 @@ public class StudentData {
 //    private final StudentService service;
     private  StudentService service;
 
-//    public StudentData(StudentService service){
-//        this.service=service;
+    public StudentData(StudentService service){
+        this.service=service;
+    }
+
+//    /**
+//     * Get all students.
+//     * @return List of students.
+//     */
+//    @GetMapping
+//    public List<Student> getAllStudents(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size){
+//        logger.info("inside get all students");
+//        return service.getAllStudents(page,size);
 //    }
 
-    /**
-     * Get all students.
-     * @return List of students.
-     */
     @GetMapping
-    public List<Student> getAllStudents(){
-        logger.info("inside get all students");
-        return service.getAllStudents();
+    public PaginatedResponse<Student> getStudents(
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "10") int size) {
+
+        return service.getPaginatedStudents(page, size);
     }
 
 

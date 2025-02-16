@@ -36,21 +36,30 @@ public class StudentRepository {
      *
      * @return all details of all students
      */
-    public List<Student> getAllStudents() {
-        String SELECT_QUERY = "SELECT * FROM Students;";
+    public List<Student> getAllStudents(int page, int size) {
+        int offset = (page - 1) * size;
+        logger.info("offset is: {}", offset);
+        String SELECT_QUERY = "SELECT * FROM Students ORDER BY id LIMIT ? OFFSET ?;";
 
-        return mysqlJdbcTemplate.query(SELECT_QUERY, (rs, rowNum) -> {
-            Student student = new Student();
-            student.setName(rs.getString("name"));
-            student.setEmail(rs.getString("email"));
-            student.setPhone(rs.getString("phone"));
-            student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
-            student.setAge(rs.getInt("age"));
-            student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
-            student.setCourseList(List.of(rs.getString("courseList").split(",")));
-            return student;
-        });
+        return mysqlJdbcTemplate.query(SELECT_QUERY, new Object[]{size, offset},
+                (rs, rowNum) -> {
+                    Student student = new Student();
+                    student.setName(rs.getString("name"));
+                    student.setEmail(rs.getString("email"));
+                    student.setPhone(rs.getString("phone"));
+                    student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
+                    student.setAge(rs.getInt("age"));
+                    student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
+                    student.setCourseList(List.of(rs.getString("courseList").split(",")));
+                    return student;
+                });
     }
+
+    public int getTotalStudentsCount() {
+        String COUNT_QUERY = "SELECT COUNT(*) FROM Students;";
+        return mysqlJdbcTemplate.queryForObject(COUNT_QUERY, Integer.class);
+    }
+
 
     /**
      * Add a new student to the database

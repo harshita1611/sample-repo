@@ -1,5 +1,6 @@
 package com.students.studentProfile.service;
 
+import com.students.studentProfile.dto.PaginatedResponse;
 import com.students.studentProfile.enums.BatchEnum;
 import com.students.studentProfile.enums.BatchEnumMap;
 import com.students.studentProfile.model.Student;
@@ -23,19 +24,31 @@ public class StudentService{
 //    private  final  StudentRepository repository;
     private StudentRepository repository;
 
-//    public StudentService(StudentRepository repository){
-//        this.repository=repository;
-//    }
+    public StudentService(StudentRepository repository){
+        this.repository=repository;
+    }
 
     private final Logger logger= LoggerFactory.getLogger(StudentService.class);
 
+
     /**
-     * get list of all students - service layer
-     * @return
+     *
+     * @param page - decides page number
+     * @param size - decides size of page
+     * @return list of response which has {size} number of entries of sql table in page number {page}
      */
-    public List<Student> getAllStudents() {
-        return repository.getAllStudents();
+    public PaginatedResponse<Student> getPaginatedStudents(int page, int size) {
+        List<Student> students = repository.getAllStudents(page, size);
+        int totalRecords = repository.getTotalStudentsCount();
+        return new PaginatedResponse<>(students, page, size, totalRecords);
     }
+//    /**
+//     * get list of all students - service layer
+//     * @return
+//     */
+//    public List<Student> getAllStudents(int page, int size) {
+//        return repository.getAllStudents(page,size);
+//    }
 //    @Override
 //    public List<Student> fetchAll() {
 //        return repository.getAllStudents();
