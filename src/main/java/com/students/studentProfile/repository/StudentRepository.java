@@ -8,10 +8,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 
-
+import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
@@ -31,6 +32,18 @@ public class StudentRepository {
 
     private final Logger logger = LoggerFactory.getLogger(StudentRepository.class);
 
+    private final RowMapper<Student> studentRowMapper=(ResultSet rs, int rowNum)-> {
+        Student student = new Student();
+        student.setName(rs.getString("name"));
+        student.setEmail(rs.getString("email"));
+        student.setPhone(rs.getString("phone"));
+        student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
+        student.setAge(rs.getInt("age"));
+        student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
+        student.setCourseList(List.of(rs.getString("courseList").split(",")));
+        return student;
+    };
+
     /**
      * Get list of all students
      *
@@ -40,19 +53,7 @@ public class StudentRepository {
         int offset = (page - 1) * size;
         logger.info("offset is: {}", offset);
         String SELECT_QUERY = "SELECT * FROM Students ORDER BY id LIMIT ? OFFSET ?;";
-
-        return mysqlJdbcTemplate.query(SELECT_QUERY, new Object[]{size, offset},
-                (rs, rowNum) -> {
-                    Student student = new Student();
-                    student.setName(rs.getString("name"));
-                    student.setEmail(rs.getString("email"));
-                    student.setPhone(rs.getString("phone"));
-                    student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
-                    student.setAge(rs.getInt("age"));
-                    student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
-                    student.setCourseList(List.of(rs.getString("courseList").split(",")));
-                    return student;
-                });
+        return mysqlJdbcTemplate.query(SELECT_QUERY,studentRowMapper,size,offset);
     }
 
     public int getTotalStudentsCount() {
@@ -87,17 +88,7 @@ public class StudentRepository {
      */
     public Student getStudentById(Integer id) {
         String SELECT_QUERY = "SELECT * FROM Students WHERE id = ?;";
-        return mysqlJdbcTemplate.queryForObject(SELECT_QUERY, (rs, rowNum) -> {
-            Student student = new Student();
-            student.setName(rs.getString("name"));
-            student.setEmail(rs.getString("email"));
-            student.setPhone(rs.getString("phone"));
-            student.setBatch(BatchEnum.valueOf(rs.getString("batch").toUpperCase()));
-            student.setAge(rs.getInt("age"));
-            student.setDateOfBirth(rs.getDate("dateOfBirth").toLocalDate());
-            student.setCourseList(List.of(rs.getString("courseList").split(",")));
-            return student;
-        }, id);
+        return mysqlJdbcTemplate.queryForObject(SELECT_QUERY, studentRowMapper,id);
     }
 
     /**
