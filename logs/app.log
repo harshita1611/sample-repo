@@ -156,3 +156,141 @@ com.students.studentProfile.filters.JwtValidationFilter$1: Invalid JWT token
 2025-02-17T00:45:46.915+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-8] c.s.s.utils.JwtTokenProvider             : username user11
 2025-02-17T00:45:46.918+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-8] c.s.s.filters.JwtValidationFilter        : authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user11, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
 2025-02-17T00:45:46.919+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-8] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-17T00:51:21.813+05:30 TRACE 49511 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.filters.JwtAuthenticationFilter    : Did not match request to Ant [pattern='/auth/login']
+2025-02-17T00:51:21.814+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.filters.JwtValidationFilter        :  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMTEiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzM5NzMzMzIzLCJleHAiOjE3Mzk3MzM5MjN9.o-eKZxNOEeqGzJLnSp-x7bv2wRPTuCyieErSEIj5y_E
+2025-02-17T00:51:21.824+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.utils.JwtTokenProvider             : username user11
+2025-02-17T00:51:21.836+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.filters.JwtValidationFilter        : authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user11, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-02-17T00:51:21.836+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-17T00:51:28.684+05:30 TRACE 49511 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.filters.JwtAuthenticationFilter    : Did not match request to Ant [pattern='/auth/login']
+2025-02-17T00:51:28.685+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.filters.JwtValidationFilter        :  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMTEiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzM5NzMzMzIzLCJleHAiOjE3Mzk3MzM5MjN9.o-eKZxNOEeqGzJLnSp-x7bv2wRPTuCyieErSEIj5y_E
+2025-02-17T00:51:28.692+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.utils.JwtTokenProvider             : username user11
+2025-02-17T00:51:28.701+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-3] c.s.s.filters.JwtValidationFilter        : authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user11, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-02-17T00:51:28.702+05:30  INFO 49511 --- [studentProfile] [http-nio-8080-exec-3] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-17T00:51:39.260+05:30  INFO 49511 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-17T00:51:39.265+05:30  INFO 49511 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-17T00:51:39.268+05:30  INFO 49511 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-17T00:51:39.274+05:30  INFO 49511 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-17T15:26:18.248+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 58118 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-17T15:26:18.249+05:30 DEBUG 58118 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-17T15:26:18.250+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-17T15:26:18.982+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 58120 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-17T15:26:18.983+05:30 DEBUG 58120 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-17T15:26:18.984+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-17T15:26:19.208+05:30  INFO 58118 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-17T15:26:19.221+05:30  INFO 58118 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-17T15:26:19.222+05:30  INFO 58118 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-17T15:26:19.254+05:30  INFO 58118 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-17T15:26:19.254+05:30  INFO 58118 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 962 ms
+2025-02-17T15:26:19.320+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security config constructor
+2025-02-17T15:26:19.474+05:30  INFO 58118 --- [studentProfile] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-02-17T15:26:19.498+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              :  inside authentication manager
+2025-02-17T15:26:19.632+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security filter chain
+2025-02-17T15:26:19.633+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : request matchers created
+2025-02-17T15:26:19.635+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.filters.JwtAuthenticationFilter    : inside constructor of auth filter
+2025-02-17T15:26:19.635+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : auth filter created
+2025-02-17T15:26:19.636+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : validation filter created
+2025-02-17T15:26:19.738+05:30  INFO 58120 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-17T15:26:19.745+05:30  INFO 58120 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-17T15:26:19.745+05:30  INFO 58120 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-17T15:26:19.772+05:30  INFO 58120 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-17T15:26:19.773+05:30  INFO 58120 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 757 ms
+2025-02-17T15:26:19.794+05:30  INFO 58118 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-17T15:26:19.800+05:30  INFO 58118 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.853 seconds (process running for 2.136)
+2025-02-17T15:26:19.831+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security config constructor
+2025-02-17T15:26:19.965+05:30  INFO 58120 --- [studentProfile] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-02-17T15:26:19.987+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              :  inside authentication manager
+2025-02-17T15:26:20.108+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security filter chain
+2025-02-17T15:26:20.109+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : request matchers created
+2025-02-17T15:26:20.111+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.filters.JwtAuthenticationFilter    : inside constructor of auth filter
+2025-02-17T15:26:20.111+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : auth filter created
+2025-02-17T15:26:20.111+05:30  INFO 58120 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : validation filter created
+2025-02-17T15:26:20.260+05:30  WARN 58120 --- [studentProfile] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-17T15:26:20.271+05:30  INFO 58120 --- [studentProfile] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-17T15:26:20.279+05:30 ERROR 58120 --- [studentProfile] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-02-17T15:26:51.139+05:30  INFO 58118 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-17T15:26:51.146+05:30  INFO 58118 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-17T15:26:59.087+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 58551 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-17T15:26:59.088+05:30 DEBUG 58551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-17T15:26:59.088+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-17T15:26:59.815+05:30  INFO 58551 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-17T15:26:59.822+05:30  INFO 58551 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-17T15:26:59.822+05:30  INFO 58551 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-17T15:26:59.851+05:30  INFO 58551 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-17T15:26:59.851+05:30  INFO 58551 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 734 ms
+2025-02-17T15:26:59.914+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security config constructor
+2025-02-17T15:27:00.081+05:30  INFO 58551 --- [studentProfile] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-02-17T15:27:00.103+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              :  inside authentication manager
+2025-02-17T15:27:00.230+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security filter chain
+2025-02-17T15:27:00.231+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : request matchers created
+2025-02-17T15:27:00.233+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.filters.JwtAuthenticationFilter    : inside constructor of auth filter
+2025-02-17T15:27:00.234+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : auth filter created
+2025-02-17T15:27:00.234+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : validation filter created
+2025-02-17T15:27:00.410+05:30  INFO 58551 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-17T15:27:00.416+05:30  INFO 58551 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.586 seconds (process running for 1.808)
+2025-02-17T15:27:19.517+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-17T15:27:19.517+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-17T15:27:19.519+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-17T15:27:19.532+05:30 TRACE 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.filters.JwtAuthenticationFilter    : Did not match request to Ant [pattern='/auth/login']
+2025-02-17T15:27:19.533+05:30 TRACE 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.filters.JwtValidationFilter        : Did not match request to Not [Ant [pattern='/auth/**']]
+2025-02-17T15:27:19.534+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-17T15:27:19.585+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.controller.UserController          : inside create new user
+2025-02-17T15:27:19.585+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.studentProfile.service.UserService   : inside service layer of create new user
+2025-02-17T15:27:19.671+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] c.s.s.repository.UserRepository          : insert user repo to create user
+2025-02-17T15:27:19.677+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-17T15:27:19.913+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b41326
+2025-02-17T15:27:19.914+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-17T15:32:17.669+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-4] c.s.s.filters.JwtAuthenticationFilter    : inside attempt authentication
+2025-02-17T15:32:17.674+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-4] c.s.s.filters.JwtAuthenticationFilter    : credentials using ObjectMapper: com.students.studentProfile.model.User@37cf2a33
+2025-02-17T15:32:17.864+05:30  INFO 58551 --- [studentProfile] [http-nio-8080-exec-4] c.s.s.filters.JwtAuthenticationFilter    : User details after successful authentication: org.springframework.security.core.userdetails.User [Username=user15, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-02-17T15:35:30.989+05:30  INFO 58551 --- [studentProfile] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-17T15:35:30.996+05:30  INFO 58551 --- [studentProfile] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-17T15:35:31.001+05:30  INFO 58551 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-17T15:35:31.009+05:30  INFO 58551 --- [studentProfile] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-17T22:41:52.351+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Starting StudentProfileApplication using Java 23.0.1 with PID 64839 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-17T22:41:52.352+05:30 DEBUG 64839 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-02-17T22:41:52.352+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-17T22:41:53.155+05:30  INFO 64839 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-17T22:41:53.163+05:30  INFO 64839 --- [studentProfile] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-17T22:41:53.164+05:30  INFO 64839 --- [studentProfile] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-17T22:41:53.192+05:30  INFO 64839 --- [studentProfile] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-17T22:41:53.192+05:30  INFO 64839 --- [studentProfile] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2025-02-17T22:41:53.263+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security config constructor
+2025-02-17T22:41:53.453+05:30  INFO 64839 --- [studentProfile] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-02-17T22:41:53.476+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              :  inside authentication manager
+2025-02-17T22:41:53.623+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : inside security filter chain
+2025-02-17T22:41:53.624+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : request matchers created
+2025-02-17T22:41:53.627+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.filters.JwtAuthenticationFilter    : inside constructor of auth filter
+2025-02-17T22:41:53.627+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : auth filter created
+2025-02-17T22:41:53.627+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.config.SecurityConfig              : validation filter created
+2025-02-17T22:41:53.883+05:30  INFO 64839 --- [studentProfile] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-17T22:41:53.890+05:30  INFO 64839 --- [studentProfile] [main] c.s.s.StudentProfileApplication          : Started StudentProfileApplication in 1.831 seconds (process running for 2.069)
+2025-02-17T22:41:54.386+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-17T22:41:54.386+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-17T22:41:54.387+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-17T22:41:54.399+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] c.s.s.filters.JwtAuthenticationFilter    : inside attempt authentication
+2025-02-17T22:41:54.428+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] c.s.s.filters.JwtAuthenticationFilter    : credentials using ObjectMapper: com.students.studentProfile.model.User@6b3e236e
+2025-02-17T22:41:54.521+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-17T22:41:54.752+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8c5f4e7
+2025-02-17T22:41:54.753+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-17T22:41:54.863+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-2] c.s.s.filters.JwtAuthenticationFilter    : User details after successful authentication: org.springframework.security.core.userdetails.User [Username=user15, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-02-17T22:43:13.255+05:30 TRACE 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.s.filters.JwtAuthenticationFilter    : Did not match request to Ant [pattern='/auth/login']
+2025-02-17T22:43:13.256+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.s.filters.JwtValidationFilter        :  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMTUiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzM5ODEyMzE0LCJleHAiOjE3Mzk4MTI5MTR9.RfNEqLynPOurav6qLenkZYyBST6UCUfuOYbQ-fHVXrM
+2025-02-17T22:43:13.275+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.s.utils.JwtTokenProvider             : username user15
+2025-02-17T22:43:13.277+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.s.filters.JwtValidationFilter        : authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user15, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-02-17T22:43:13.280+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.studentProfile.config.LoggingFilter  : logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-17T22:43:13.302+05:30  INFO 64839 --- [studentProfile] [http-nio-8080-exec-5] c.s.s.repository.StudentRepository       : offset is: 3
