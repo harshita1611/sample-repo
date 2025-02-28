@@ -1,0 +1,33 @@
+2025-02-20 07:05:56 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.1 with PID 73344 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-20 07:05:56 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-20 07:05:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-02-20 07:05:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-20 07:05:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-02-20 07:05:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-20 07:05:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-02-20 07:05:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 809 ms
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig - inside security config constructor
+2025-02-20 07:05:57 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig -  inside authentication manager
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig - Request matchers created
+2025-02-20 07:05:57 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig - Auth filter created
+2025-02-20 07:05:57 [main] INFO  c.s.s.config.SecurityConfig - Validation filter created
+2025-02-20 07:05:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-20 07:05:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-02-20 07:05:57 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.617 seconds (process running for 2.004)
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  c.s.s.controller.UserController - inside create new user
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  c.s.s.service.UserService - inside service layer of create new user
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  c.s.s.repository.UserRepository - insert user repo to create user
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24bef021
+2025-02-20 07:06:06 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-20 07:06:27 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 07:06:27 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-02-20 07:06:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-02-20 07:06:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

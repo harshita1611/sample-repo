@@ -18,7 +18,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("students")
+@RequestMapping("/students")
 public class StudentData {
 
     private static final Logger logger = LoggerFactory.getLogger(StudentData.class);
