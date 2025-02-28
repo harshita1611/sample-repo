@@ -2187,3 +2187,141 @@
 2025-02-28 12:40:54 [http-nio-8081-exec-1] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
 2025-02-28 12:40:54 [http-nio-8081-exec-1] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@5f1201c2
 2025-02-28 12:40:54 [http-nio-8081-exec-1] INFO  c.s.s.f.JwtAuthenticationFilter - User details after successful authentication: org.springframework.security.core.userdetails.User [Username=user123, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-02-28 12:45:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-02-28 12:45:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-02-28 12:45:41 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 22752 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-02-28 12:45:41 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-28 12:45:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-02-28 12:45:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-02-28 12:45:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-02-28 12:45:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-02-28 12:45:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-02-28 12:45:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 687 ms
+2025-02-28 12:45:42 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-02-28 12:45:42 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-02-28 12:45:42 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@681de87f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2eb1c615, org.springframework.security.web.context.SecurityContextHolderFilter@2e4eda17, org.springframework.security.web.header.HeaderWriterFilter@9263c54, org.springframework.web.filter.CorsFilter@2674d4f6, org.springframework.security.web.authentication.logout.LogoutFilter@33d230ce, com.students.studentProfile.filters.JwtAuthenticationFilter@5d9d2119, com.students.studentProfile.filters.JwtValidationFilter@5a4464c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6befbb12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21d9cd04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ae590f6, org.springframework.security.web.session.SessionManagementFilter@4662752a, org.springframework.security.web.access.ExceptionTranslationFilter@1cde374, org.springframework.security.web.access.intercept.AuthorizationFilter@5c234920]
+2025-02-28 12:45:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-02-28 12:45:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-02-28 12:45:42 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.378 seconds (process running for 1.667)
+2025-02-28 12:45:47 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-28 12:45:47 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-02-28 12:45:47 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-02-28 12:45:47 [http-nio-8081-exec-1] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-2] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-3] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-5] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-6] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-4] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-8] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-7] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-9] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:45:47 [http-nio-8081-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 204 ms
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  c.s.s.controller.UserController - inside create new user
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  c.s.s.service.UserService - inside service layer of create new user
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  c.s.s.repository.UserRepository - insert user repo to create user
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e158b5
+2025-02-28 12:46:17 [http-nio-8081-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-28 12:46:39 [http-nio-8081-exec-1] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
+2025-02-28 12:46:39 [http-nio-8081-exec-1] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@3734ce2d
+2025-02-28 12:46:39 [http-nio-8081-exec-1] ERROR c.s.s.f.JwtAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Incorrect result size: expected 1, actual 0
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:118)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at com.students.studentProfile.filters.JwtAuthenticationFilter.attemptAuthentication(JwtAuthenticationFilter.java:49)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:190)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:897)
+	at com.students.studentProfile.repository.UserRepository.findByUsername(UserRepository.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.students.studentProfile.repository.UserRepository$$SpringCGLIB$$0.findByUsername(<generated>)
+	at com.students.studentProfile.service.UserService.loadUserByUsername(UserService.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.students.studentProfile.service.UserService$$SpringCGLIB$$0.loadUserByUsername(<generated>)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:103)
+	... 64 common frames omitted
+2025-02-28 12:46:57 [http-nio-8081-exec-6] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
+2025-02-28 12:46:57 [http-nio-8081-exec-6] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@ca58899
+2025-02-28 12:46:57 [http-nio-8081-exec-6] INFO  c.s.s.f.JwtAuthenticationFilter - User details after successful authentication: org.springframework.security.core.userdetails.User [Username=teacher1, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-02-28 12:47:14 [http-nio-8081-exec-8] INFO  c.s.s.filters.JwtValidationFilter -  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUiJdLCJpYXQiOjE3NDA3MjcwMTcsImV4cCI6MTc0MDcyNzYxN30.5bkckws_VH8oG1RJpw6AcCzsyayFxtQj9wtcyvVJrLo
+2025-02-28 12:47:14 [http-nio-8081-exec-8] INFO  c.s.s.utils.JwtTokenProvider - username teacher1
+2025-02-28 12:47:14 [http-nio-8081-exec-8] INFO  c.s.s.filters.JwtValidationFilter - authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=teacher1, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-02-28 12:47:14 [http-nio-8081-exec-8] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-02-28 12:47:14 [http-nio-8081-exec-8] INFO  c.s.s.repository.StudentRepository - offset is: 0
+2025-02-28 12:47:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-02-28 12:47:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

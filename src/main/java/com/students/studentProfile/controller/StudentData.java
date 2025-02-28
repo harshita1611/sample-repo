@@ -3,6 +3,7 @@ package com.students.studentProfile.controller;
 import com.students.studentProfile.dto.PaginatedResponse;
 import com.students.studentProfile.model.Student;
 import com.students.studentProfile.service.StudentService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ import java.util.List;
  */
 
 @RestController
+@SecurityRequirement(name = "bearerAuth")
 @RequestMapping("/students")
 public class StudentData {
 
