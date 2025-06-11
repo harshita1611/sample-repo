@@ -1,0 +1,36 @@
+2025-03-15 13:47:41 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 41662 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-03-15 13:47:41 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-15 13:47:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-15 13:47:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-15 13:47:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-15 13:47:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-15 13:47:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-15 13:47:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 686 ms
+2025-03-15 13:47:42 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-03-15 13:47:42 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-03-15 13:47:42 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7bf018dd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15a8cebd, org.springframework.security.web.context.SecurityContextHolderFilter@49cc9b2a, org.springframework.security.web.header.HeaderWriterFilter@4e48462d, org.springframework.web.filter.CorsFilter@3f6c2763, org.springframework.security.web.authentication.logout.LogoutFilter@5d9d2119, com.students.studentProfile.filters.JwtAuthenticationFilter@5c82031b, com.students.studentProfile.filters.JwtValidationFilter@274fdea6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c5ca0b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37b01ce2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74c121d4, org.springframework.security.web.session.SessionManagementFilter@10a907ec, org.springframework.security.web.access.ExceptionTranslationFilter@642c6461, org.springframework.security.web.access.intercept.AuthorizationFilter@250967f1]
+2025-03-15 13:47:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-15 13:47:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-03-15 13:47:42 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.367 seconds (process running for 1.712)
+2025-03-15 13:47:59 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-15 13:47:59 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-15 13:47:59 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-15 13:47:59 [http-nio-8081-exec-1] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-2] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-3] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-4] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-6] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-5] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-7] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-8] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:47:59 [http-nio-8081-exec-9] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 13:48:00 [http-nio-8081-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 200 ms
+2025-03-15 14:39:59 [http-nio-8081-exec-6] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-7] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-9] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-8] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-3] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-10] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-1] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-2] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-15 14:39:59 [http-nio-8081-exec-2] DEBUG o.s.api.AbstractOpenApiResource - Fetching openApi document from cache
