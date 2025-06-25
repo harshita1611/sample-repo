@@ -1,0 +1,289 @@
+2025-06-12 07:46:47 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 9724 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:46:47 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:46:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:46:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:46:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:46:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:46:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:46:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 690 ms
+2025-06-12 07:46:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+2025-06-12 07:46:48 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-12 07:46:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12 07:46:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.students.studentProfile.StudentProfileApplication.main(StudentProfileApplication.java:15)
+Caused by: io.github.cdimascio.dotenv.DotEnvException: Could not find /.env on the classpath
+	at io.github.cdimascio.dotenv.internal.ClasspathHelper.loadFileFromClasspath(ClassPathHelper.kt:37)
+	at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:36)
+	at io.github.cdimascio.dotenv.internal.DotenvParser.parse(DotenvParser.kt:26)
+	at io.github.cdimascio.dotenv.DotenvBuilder.load(Dotenv.kt:124)
+	at io.github.cdimascio.dotenv.Dotenv$Instance.load(Dotenv.kt:32)
+	at io.github.cdimascio.dotenv.Dotenv.load(Dotenv.kt)
+	at com.students.studentProfile.config.DotenvConfig.loadEnvVariables(DotenvConfig.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+	Suppressed: io.github.cdimascio.dotenv.DotEnvException: Could not find ./.env on the file system (working directory: /Users/harshitabhambhani/Desktop/POC/sample-repo)
+		at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:40)
+		... 28 common frames omitted
+2025-06-12 07:46:57 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 9846 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:46:57 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:46:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:46:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:46:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:46:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:46:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:46:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 646 ms
+2025-06-12 07:46:58 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+2025-06-12 07:46:58 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-12 07:46:58 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12 07:46:58 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.students.studentProfile.StudentProfileApplication.main(StudentProfileApplication.java:15)
+Caused by: io.github.cdimascio.dotenv.DotEnvException: Could not find /.env on the classpath
+	at io.github.cdimascio.dotenv.internal.ClasspathHelper.loadFileFromClasspath(ClassPathHelper.kt:37)
+	at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:36)
+	at io.github.cdimascio.dotenv.internal.DotenvParser.parse(DotenvParser.kt:26)
+	at io.github.cdimascio.dotenv.DotenvBuilder.load(Dotenv.kt:124)
+	at io.github.cdimascio.dotenv.Dotenv$Instance.load(Dotenv.kt:32)
+	at io.github.cdimascio.dotenv.Dotenv.load(Dotenv.kt)
+	at com.students.studentProfile.config.DotenvConfig.loadEnvVariables(DotenvConfig.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+	Suppressed: io.github.cdimascio.dotenv.DotEnvException: Could not find ./.env on the file system (working directory: /Users/harshitabhambhani/Desktop/POC/sample-repo)
+		at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:40)
+		... 28 common frames omitted
+2025-06-12 07:47:14 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 21.0.6 with PID 10125 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:47:14 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:47:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:47:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:47:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:47:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:47:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:47:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 710 ms
+2025-06-12 07:47:15 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+2025-06-12 07:47:15 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-12 07:47:15 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12 07:47:15 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.students.studentProfile.StudentProfileApplication.main(StudentProfileApplication.java:15)
+Caused by: io.github.cdimascio.dotenv.DotEnvException: Could not find /.env on the classpath
+	at io.github.cdimascio.dotenv.internal.ClasspathHelper.loadFileFromClasspath(ClassPathHelper.kt:37)
+	at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:36)
+	at io.github.cdimascio.dotenv.internal.DotenvParser.parse(DotenvParser.kt:26)
+	at io.github.cdimascio.dotenv.DotenvBuilder.load(Dotenv.kt:124)
+	at io.github.cdimascio.dotenv.Dotenv$Instance.load(Dotenv.kt:32)
+	at io.github.cdimascio.dotenv.Dotenv.load(Dotenv.kt)
+	at com.students.studentProfile.config.DotenvConfig.loadEnvVariables(DotenvConfig.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+	Suppressed: io.github.cdimascio.dotenv.DotEnvException: Could not find ./.env on the file system (working directory: /Users/harshitabhambhani/Desktop/POC/sample-repo)
+		at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:40)
+		... 28 common frames omitted
+2025-06-12 07:47:48 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 21.0.6 with PID 10506 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:47:48 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:47:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:47:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:47:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:47:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:47:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:47:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 664 ms
+2025-06-12 07:47:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+2025-06-12 07:47:48 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-12 07:47:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12 07:47:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.students.studentProfile.StudentProfileApplication.main(StudentProfileApplication.java:15)
+Caused by: io.github.cdimascio.dotenv.DotEnvException: Could not find /.env on the classpath
+	at io.github.cdimascio.dotenv.internal.ClasspathHelper.loadFileFromClasspath(ClassPathHelper.kt:37)
+	at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:36)
+	at io.github.cdimascio.dotenv.internal.DotenvParser.parse(DotenvParser.kt:26)
+	at io.github.cdimascio.dotenv.DotenvBuilder.load(Dotenv.kt:124)
+	at io.github.cdimascio.dotenv.Dotenv$Instance.load(Dotenv.kt:32)
+	at io.github.cdimascio.dotenv.Dotenv.load(Dotenv.kt)
+	at com.students.studentProfile.config.DotenvConfig.loadEnvVariables(DotenvConfig.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+	Suppressed: io.github.cdimascio.dotenv.DotEnvException: Could not find ./.env on the file system (working directory: /Users/harshitabhambhani/Desktop/POC/sample-repo)
+		at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:40)
+		... 28 common frames omitted
+2025-06-12 07:48:44 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 21.0.6 with PID 11046 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:48:44 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:48:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:48:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:48:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:48:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:48:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:48:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 674 ms
+2025-06-12 07:48:45 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+2025-06-12 07:48:45 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-12 07:48:45 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12 07:48:45 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dotenvConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.students.studentProfile.StudentProfileApplication.main(StudentProfileApplication.java:15)
+Caused by: io.github.cdimascio.dotenv.DotEnvException: Could not find /.env on the classpath
+	at io.github.cdimascio.dotenv.internal.ClasspathHelper.loadFileFromClasspath(ClassPathHelper.kt:37)
+	at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:36)
+	at io.github.cdimascio.dotenv.internal.DotenvParser.parse(DotenvParser.kt:26)
+	at io.github.cdimascio.dotenv.DotenvBuilder.load(Dotenv.kt:124)
+	at io.github.cdimascio.dotenv.Dotenv$Instance.load(Dotenv.kt:32)
+	at io.github.cdimascio.dotenv.Dotenv.load(Dotenv.kt)
+	at com.students.studentProfile.config.DotenvConfig.loadEnvVariables(DotenvConfig.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+	Suppressed: io.github.cdimascio.dotenv.DotEnvException: Could not find ./.env on the file system (working directory: /Users/harshitabhambhani/Desktop/POC/sample-repo)
+		at io.github.cdimascio.dotenv.internal.DotenvReader.read(DotenvReader.kt:40)
+		... 28 common frames omitted
+2025-06-12 07:49:35 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 21.0.6 with PID 11612 (/Users/harshitabhambhani/Desktop/POC/sample-repo/student-profile-repo/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/POC/sample-repo)
+2025-06-12 07:49:35 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 07:49:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-12 07:49:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:49:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 07:49:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-06-12 07:49:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 07:49:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 664 ms
+2025-06-12 07:49:36 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-06-12 07:49:36 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-06-12 07:49:36 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@514377fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e4eda17, org.springframework.security.web.context.SecurityContextHolderFilter@3c33fcf8, org.springframework.security.web.header.HeaderWriterFilter@48567727, org.springframework.web.filter.CorsFilter@7b5021d1, org.springframework.security.web.authentication.logout.LogoutFilter@111a7973, com.students.studentProfile.filters.JwtAuthenticationFilter@6befbb12, com.students.studentProfile.filters.JwtValidationFilter@21d9cd04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@716f94c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53feeac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@799f354a, org.springframework.security.web.session.SessionManagementFilter@259287ac, org.springframework.security.web.access.ExceptionTranslationFilter@6afbe6a1, org.springframework.security.web.access.intercept.AuthorizationFilter@28daf506]
+2025-06-12 07:49:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-06-12 07:49:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-06-12 07:49:36 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.313 seconds (process running for 1.713)
+2025-06-12 07:49:40 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12 07:49:40 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-12 07:49:40 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-12 07:49:40 [http-nio-8081-exec-1] INFO  c.s.s.filters.JwtValidationFilter -  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNTEiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzQ5NjgzNDg2LCJleHAiOjE3NDk2ODQwODZ9.2Oes54XsQ45qYx9x9uJ3ZzKYRwg7lyGuYWq-u11i7qg
+2025-06-12 07:49:40 [http-nio-8081-exec-1] ERROR c.s.s.utils.JwtTokenProvider - Invalid JWT token: JWT expired at 2025-06-11T23:21:26Z. Current time: 2025-06-12T02:19:40Z, a difference of 10694845 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-06-12 07:49:40 [http-nio-8081-exec-1] INFO  c.s.s.filters.JwtValidationFilter -  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNTEiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzQ5NjgzNDg2LCJleHAiOjE3NDk2ODQwODZ9.2Oes54XsQ45qYx9x9uJ3ZzKYRwg7lyGuYWq-u11i7qg
+2025-06-12 07:49:40 [http-nio-8081-exec-1] ERROR c.s.s.utils.JwtTokenProvider - Invalid JWT token: JWT expired at 2025-06-11T23:21:26Z. Current time: 2025-06-12T02:19:40Z, a difference of 10694851 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@24b7321b
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21d1ba8f
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-12 07:49:44 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - User details after successful authentication: org.springframework.security.core.userdetails.User [Username=user51, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-06-12 07:49:52 [http-nio-8081-exec-4] INFO  c.s.s.filters.JwtValidationFilter -  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNTEiLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzQ5Njk0Nzg0LCJleHAiOjE3NDk2OTUzODR9.y9C42vpemsW9tozl1m2hq5gyAcFs4gVdeXlUxA7J5yk
+2025-06-12 07:49:52 [http-nio-8081-exec-4] INFO  c.s.s.utils.JwtTokenProvider - username user51
+2025-06-12 07:49:52 [http-nio-8081-exec-4] INFO  c.s.s.filters.JwtValidationFilter - authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user51, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-06-12 07:49:52 [http-nio-8081-exec-4] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-06-12 07:49:52 [http-nio-8081-exec-4] INFO  c.s.s.repository.StudentRepository - offset is: 0
+2025-06-12 08:02:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-12 08:02:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
