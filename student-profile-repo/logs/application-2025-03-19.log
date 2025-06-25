@@ -1,0 +1,100 @@
+2025-03-19 23:21:55 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 31470 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-03-19 23:21:55 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 23:21:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-19 23:21:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:21:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-19 23:21:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-19 23:21:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-19 23:21:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 752 ms
+2025-03-19 23:21:56 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-03-19 23:21:56 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-03-19 23:21:56 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69b3886f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53d30d23, org.springframework.security.web.context.SecurityContextHolderFilter@33d230ce, org.springframework.security.web.header.HeaderWriterFilter@26a4f9ed, org.springframework.web.filter.CorsFilter@44faa4f2, org.springframework.security.web.authentication.logout.LogoutFilter@25c1f5ee, com.students.studentProfile.filters.JwtAuthenticationFilter@6793f752, com.students.studentProfile.filters.JwtValidationFilter@1216eb3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a316f6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63f9ddf9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59e7564b, org.springframework.security.web.session.SessionManagementFilter@45287377, org.springframework.security.web.access.ExceptionTranslationFilter@1894fa9f, org.springframework.security.web.access.intercept.AuthorizationFilter@424f02b8]
+2025-03-19 23:21:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:21:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-03-19 23:21:57 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.525 seconds (process running for 1.819)
+2025-03-19 23:22:09 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 31694 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-03-19 23:22:09 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 23:22:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-19 23:22:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:22:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-19 23:22:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-19 23:22:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-19 23:22:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 684 ms
+2025-03-19 23:22:10 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-03-19 23:22:10 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-03-19 23:22:10 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d7f8467, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29bd85db, org.springframework.security.web.context.SecurityContextHolderFilter@6818fd48, org.springframework.security.web.header.HeaderWriterFilter@4f213a2, org.springframework.web.filter.CorsFilter@7caf1e5, org.springframework.security.web.authentication.logout.LogoutFilter@1144a02b, com.students.studentProfile.filters.JwtAuthenticationFilter@5c234920, com.students.studentProfile.filters.JwtValidationFilter@7ddeb27f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28daf506, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4662752a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38087342, org.springframework.security.web.session.SessionManagementFilter@5a47730c, org.springframework.security.web.access.ExceptionTranslationFilter@78b0ec3a, org.springframework.security.web.access.intercept.AuthorizationFilter@4e17442f]
+2025-03-19 23:22:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:22:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-03-19 23:22:10 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.331 seconds (process running for 1.731)
+2025-03-19 23:23:21 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-19 23:23:21 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-19 23:23:21 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-03-19 23:23:37 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 32569 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-03-19 23:23:37 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 23:23:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-19 23:23:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:23:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-19 23:23:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-19 23:23:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-19 23:23:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 698 ms
+2025-03-19 23:23:38 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-03-19 23:23:38 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-03-19 23:23:38 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33d230ce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35e74e08, org.springframework.security.web.context.SecurityContextHolderFilter@1a2773a8, org.springframework.security.web.header.HeaderWriterFilter@20216016, org.springframework.web.filter.CorsFilter@a316f6b, org.springframework.security.web.authentication.logout.LogoutFilter@59b492ec, com.students.studentProfile.filters.JwtAuthenticationFilter@63f9ddf9, com.students.studentProfile.filters.JwtValidationFilter@410fc508, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46612bfc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f213a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e17442f, org.springframework.security.web.session.SessionManagementFilter@267891bf, org.springframework.security.web.access.ExceptionTranslationFilter@4ae8fb2a, org.springframework.security.web.access.intercept.AuthorizationFilter@45287377]
+2025-03-19 23:23:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:23:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-03-19 23:23:38 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.373 seconds (process running for 1.665)
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  c.s.s.controller.UserController - inside create new user
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  c.s.s.service.UserService - inside service layer of create new user
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  c.s.s.repository.UserRepository - insert user repo to create user
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@358fc1ef
+2025-03-19 23:24:09 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-19 23:24:21 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
+2025-03-19 23:24:21 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@33011088
+2025-03-19 23:24:22 [http-nio-8081-exec-3] INFO  c.s.s.f.JwtAuthenticationFilter - User details after successful authentication: org.springframework.security.core.userdetails.User [Username=user50, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-03-19 23:25:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-19 23:25:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-19 23:25:12 [main] INFO  c.s.s.StudentProfileApplication - Starting StudentProfileApplication using Java 23.0.2 with PID 33547 (/Users/harshitabhambhani/Desktop/studentProfile/target/classes started by harshitabhambhani in /Users/harshitabhambhani/Desktop/studentProfile)
+2025-03-19 23:25:12 [main] INFO  c.s.s.StudentProfileApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 23:25:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-19 23:25:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:25:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-19 23:25:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-19 23:25:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-19 23:25:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 638 ms
+2025-03-19 23:25:12 [main] INFO  c.s.s.config.SecurityConfig - Inside security filter chain
+2025-03-19 23:25:12 [main] INFO  c.s.s.f.JwtAuthenticationFilter - inside constructor of auth filter
+2025-03-19 23:25:12 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33d230ce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35e74e08, org.springframework.security.web.context.SecurityContextHolderFilter@1a2773a8, org.springframework.security.web.header.HeaderWriterFilter@20216016, org.springframework.web.filter.CorsFilter@a316f6b, org.springframework.security.web.authentication.logout.LogoutFilter@59b492ec, com.students.studentProfile.filters.JwtAuthenticationFilter@63f9ddf9, com.students.studentProfile.filters.JwtValidationFilter@410fc508, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46612bfc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f213a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e17442f, org.springframework.security.web.session.SessionManagementFilter@267891bf, org.springframework.security.web.access.ExceptionTranslationFilter@4ae8fb2a, org.springframework.security.web.access.intercept.AuthorizationFilter@45287377]
+2025-03-19 23:25:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-19 23:25:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-03-19 23:25:13 [main] INFO  c.s.s.StudentProfileApplication - Started StudentProfileApplication in 1.288 seconds (process running for 1.614)
+2025-03-19 23:25:16 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-19 23:25:16 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-19 23:25:16 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-19 23:25:36 [http-nio-8081-exec-4] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-7] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-5] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-8] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-6] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-9] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-10] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-1] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:36 [http-nio-8081-exec-1] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 213 ms
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  c.s.s.controller.UserController - inside create new user
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  c.s.s.service.UserService - inside service layer of create new user
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  c.s.s.repository.UserRepository - insert user repo to create user
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37359be
+2025-03-19 23:25:52 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-19 23:26:13 [http-nio-8081-exec-8] INFO  c.s.s.f.JwtAuthenticationFilter - inside attempt authentication
+2025-03-19 23:26:13 [http-nio-8081-exec-8] INFO  c.s.s.f.JwtAuthenticationFilter - credentials using ObjectMapper: com.students.studentProfile.model.User@38451eb8
+2025-03-19 23:26:13 [http-nio-8081-exec-8] INFO  c.s.s.f.JwtAuthenticationFilter - User details after successful authentication: org.springframework.security.core.userdetails.User [Username=string, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]]
+2025-03-19 23:26:37 [http-nio-8081-exec-3] INFO  c.s.s.filters.JwtValidationFilter -  jwt token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHJpbmciLCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiXSwiaWF0IjoxNzQyNDA2OTczLCJleHAiOjE3NDI0MDc1NzN9.ujWvlSUiphxQ9m62UvX-XYYc2njBc6eFqtBXnbsyEYk
+2025-03-19 23:26:37 [http-nio-8081-exec-3] INFO  c.s.s.utils.JwtTokenProvider - username string
+2025-03-19 23:26:37 [http-nio-8081-exec-3] INFO  c.s.s.filters.JwtValidationFilter - authentication:UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=string, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_TEACHER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_TEACHER]]
+2025-03-19 23:26:37 [http-nio-8081-exec-3] INFO  c.s.s.config.LoggingFilter - logging incoming request: 0:0:0:0:0:0:0:1
